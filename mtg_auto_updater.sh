@@ -16,7 +16,7 @@ if [ $? -eq 0 ]; then
 
         # 3. Aggiornamento JSON
         echo "Eseguo json_creator.py..."
-        python3 json_creatorv_2.py
+        python3 json_creatorv_3.py
 
         if [ $? -eq 0 ]; then
             echo "JSON aggiornato con successo."
