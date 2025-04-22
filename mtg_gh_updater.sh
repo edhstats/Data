@@ -3,7 +3,8 @@
 # Definisci il percorso della directory del repository
 REPO_DIR=$(pwd)
 DATA_DIR="${REPO_DIR}/Data"
-GIT_BRANCH="gh-pages"  # Branch per GitHub Pages
+GIT_BRANCH="gh-pages"  # Branch corrente (dove stai lavorando)
+MAIN_BRANCH="main"     # Branch di destinazione per commanders.json
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 
 # 1. Upload in bulk
@@ -36,46 +37,43 @@ if [ $? -ne 0 ]; then
 fi
 echo "JSON aggiornato con successo."
 
-# 4. Git Operations - Pubblicazione su GitHub Pages
-echo "Pubblicazione su GitHub Pages..."
-
-# Controlla se ci sono modifiche nel repository
-if git diff --quiet "${DATA_DIR}"; then
-    echo "Nessuna modifica rilevata nei dati. Pubblicazione su GitHub Pages non necessaria."
-    exit 0
-fi
-
-# A. Salva lo stato attuale del branch di lavoro
-CURRENT_BRANCH=$(git branch --show-current)
-echo "Salvataggio modifiche sul branch corrente: ${CURRENT_BRANCH}"
+# Salva lo stato attuale del branch gh-pages
+echo "Salvataggio modifiche sul branch corrente: ${GIT_BRANCH}"
 git add "${DATA_DIR}"
-git commit -m "Aggiornamento dati EDH: ${TIMESTAMP}"
+git commit -m "Aggiornamento dati EDH in Data/: ${TIMESTAMP}"
 
-# B. Pubblica su GitHub Pages
-echo "Pubblicazione sul branch ${GIT_BRANCH}..."
+# 4. Salva il file commanders.json nel branch main
+echo "Spostamento di commanders.json nel branch ${MAIN_BRANCH}..."
 
-# Opzione 1: Se usi un branch separato per GitHub Pages
-if [ "${CURRENT_BRANCH}" != "${GIT_BRANCH}" ]; then
-    # Verifica se il branch gh-pages esiste
-    if git show-ref --verify --quiet refs/heads/${GIT_BRANCH}; then
-        # Branch esiste, lo aggiorna
-        git checkout ${GIT_BRANCH}
-        git pull origin ${GIT_BRANCH} --rebase
-        # Aggiorna con le modifiche dal branch principale
-        git merge ${CURRENT_BRANCH} -m "Merge aggiornamenti dal branch ${CURRENT_BRANCH}"
-    else
-        # Branch non esiste, lo crea
-        git checkout -b ${GIT_BRANCH}
-    fi
-    
-    # Push al repository
-    git push origin ${GIT_BRANCH}
-    
-    # Torna al branch originale
-    git checkout ${CURRENT_BRANCH}
-else
-    # Se sei già sul branch gh-pages, fai solo il push
-    git push origin ${GIT_BRANCH}
+# Salva percorso del file JSON
+JSON_FILE="${DATA_DIR}/commanders.json"
+if [ ! -f "$JSON_FILE" ]; then
+    echo "File commanders.json non trovato in ${DATA_DIR}"
+    exit 1
 fi
 
-echo "✅ Pubblicazione su GitHub Pages completata!"
+# Salva una copia temporanea del file JSON
+TEMP_JSON="/tmp/commanders_temp.json"
+cp "$JSON_FILE" "$TEMP_JSON"
+
+# Cambia al branch main
+git checkout $MAIN_BRANCH
+git pull origin $MAIN_BRANCH --rebase
+
+# Copia il file nella root del branch main
+cp "$TEMP_JSON" "${REPO_DIR}/commanders.json"
+
+# Commit e push delle modifiche nel branch main
+git add "${REPO_DIR}/commanders.json"
+git commit -m "Aggiornamento commanders.json: ${TIMESTAMP}"
+git push origin $MAIN_BRANCH
+
+echo "✅ File commanders.json aggiornato nel branch ${MAIN_BRANCH}"
+
+# Torna al branch gh-pages originale
+git checkout $GIT_BRANCH
+
+# 5. Push delle modifiche nel branch gh-pages
+git push origin $GIT_BRANCH
+
+echo "✅ Modifiche salvate in entrambi i branch: ${GIT_BRANCH} e ${MAIN_BRANCH}"
