@@ -84,10 +84,20 @@ except sqlite3.OperationalError as e:
     print("Assicurati che la tabella 'matches' abbia una colonna 'date' in formato YYYY-MM-DD.")
 
 # Salvataggio del file JSON completo
-output_dir = os.path.join(os.getcwd(), "Data_JSON")
-os.makedirs(output_dir, exist_ok=True)
+# Ottieni la directory di esecuzione (current working directory)
+output_dir = os.getcwd()
+
+# Definisci il percorso del file JSON
 output_path = os.path.join(output_dir, "commanders.json")
 
+# Esempio di dati JSON
+data = {"name": "Commander Example", "power": 5}
+
+# Scrivi il file JSON nella stessa directory di esecuzione
+with open(output_path, "w", encoding="utf-8") as json_file:
+    json.dump(data, json_file, indent=4)
+
+print(f"File salvato in: {output_path}")
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump({"commanders": commanders}, f, indent=4, ensure_ascii=False)
 
