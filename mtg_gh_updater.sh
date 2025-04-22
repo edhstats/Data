@@ -2,7 +2,7 @@
 
 # Definisci il percorso della directory del repository
 REPO_DIR=$(pwd)
-DATA_DIR="${REPO_DIR}/Data"
+JSON_FILE="${REPO_DIR}/commanders.json"  # Percorso corretto del file JSON generato
 GIT_BRANCH="gh-pages"  # Branch corrente (dove stai lavorando)
 MAIN_BRANCH="main"     # Branch di destinazione per commanders.json
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
@@ -37,20 +37,20 @@ if [ $? -ne 0 ]; then
 fi
 echo "JSON aggiornato con successo."
 
+# Verifica che il file commanders.json esista
+if [ ! -f "$JSON_FILE" ]; then
+    echo "File commanders.json non trovato in $JSON_FILE"
+    exit 1
+fi
+echo "File commanders.json trovato in: $JSON_FILE"
+
 # Salva lo stato attuale del branch gh-pages
 echo "Salvataggio modifiche sul branch corrente: ${GIT_BRANCH}"
-git add "${DATA_DIR}"
-git commit -m "Aggiornamento dati EDH in Data/: ${TIMESTAMP}"
+git add edh_report.html commanders.json
+git commit -m "Aggiornamento dati EDH: ${TIMESTAMP}"
 
 # 4. Salva il file commanders.json nel branch main
 echo "Spostamento di commanders.json nel branch ${MAIN_BRANCH}..."
-
-# Salva percorso del file JSON
-JSON_FILE="${DATA_DIR}/commanders.json"
-if [ ! -f "$JSON_FILE" ]; then
-    echo "File commanders.json non trovato in ${DATA_DIR}"
-    exit 1
-fi
 
 # Salva una copia temporanea del file JSON
 TEMP_JSON="/tmp/commanders_temp.json"
