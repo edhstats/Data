@@ -44,6 +44,49 @@
             ]
         },
         {
+            "id": 168,
+            "name": "disa the restless",
+            "mana_cost": "{2}{B}{R}{G}",
+            "cmc": 5.0,
+            "color_identity": [
+                "BRG"
+            ],
+            "partite": 21,
+            "vittorie": 4,
+            "storico": [
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 6,
+                    "winrate": 33.3
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 4,
+                    "winrate": 25.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 8,
+                    "winrate": 12.5
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 2,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 27,
             "name": "shalai and hallar",
             "mana_cost": "{1}{R}{G}{W}",
@@ -89,43 +132,6 @@
                     "mese": "2025-04",
                     "partite": 1,
                     "winrate": 100.0
-                }
-            ]
-        },
-        {
-            "id": 168,
-            "name": "disa the restless",
-            "mana_cost": "{2}{B}{R}{G}",
-            "cmc": 5.0,
-            "color_identity": [
-                "BRG"
-            ],
-            "partite": 19,
-            "vittorie": 4,
-            "storico": [
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 6,
-                    "winrate": 33.3
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 4,
-                    "winrate": 25.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 8,
-                    "winrate": 12.5
                 }
             ]
         },
@@ -512,6 +518,43 @@
             ]
         },
         {
+            "id": 194,
+            "name": "satya, aetherflux genius",
+            "mana_cost": "{1}{U}{R}{W}",
+            "cmc": "4.O",
+            "color_identity": [
+                "URW"
+            ],
+            "partite": 12,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 2,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 3,
+                    "winrate": 66.7
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 6,
+                    "winrate": 16.7
+                }
+            ]
+        },
+        {
             "id": 166,
             "name": "aragorn, the uniter",
             "mana_cost": "{R}{G}{W}{U}",
@@ -545,6 +588,49 @@
                     "mese": "2025-03",
                     "partite": 1,
                     "winrate": 0.0
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "name": "baru, wurmspeaker",
+            "mana_cost": "{2}{G}{G}",
+            "cmc": 4.0,
+            "color_identity": [
+                "G"
+            ],
+            "partite": 11,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 3,
+                    "winrate": 33.3
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 3,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 2,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 2,
+                    "winrate": 50.0
                 }
             ]
         },
@@ -888,43 +974,6 @@
             ]
         },
         {
-            "id": 194,
-            "name": "satya, aetherflux genius",
-            "mana_cost": "{1}{U}{R}{W}",
-            "cmc": "4.O",
-            "color_identity": [
-                "URW"
-            ],
-            "partite": 10,
-            "vittorie": 3,
-            "storico": [
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 2,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 3,
-                    "winrate": 66.7
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
-                    "partite": 4,
-                    "winrate": 25.0
-                }
-            ]
-        },
-        {
             "id": 28,
             "name": "toski, bearer of secrets",
             "mana_cost": "{3}{G}",
@@ -1020,43 +1069,6 @@
                     "mese": "2025-03",
                     "partite": 3,
                     "winrate": 66.7
-                }
-            ]
-        },
-        {
-            "id": 30,
-            "name": "baru, wurmspeaker",
-            "mana_cost": "{2}{G}{G}",
-            "cmc": 4.0,
-            "color_identity": [
-                "G"
-            ],
-            "partite": 9,
-            "vittorie": 2,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 3,
-                    "winrate": 33.3
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 3,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 2,
-                    "winrate": 50.0
                 }
             ]
         },
@@ -2199,6 +2211,37 @@
             ]
         },
         {
+            "id": 88,
+            "name": "xantcha, sleeper agent",
+            "mana_cost": "{1}{B}{R}",
+            "cmc": 3.0,
+            "color_identity": [
+                "BR"
+            ],
+            "partite": 6,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 2,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 2,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 2,
+                    "winrate": 50.0
+                }
+            ]
+        },
+        {
             "id": 230,
             "name": "anzrag, the quake-mole",
             "mana_cost": "{2}{R}{G}",
@@ -3227,31 +3270,6 @@
                     "periodo": "Feb 2025",
                     "mese": "2025-02",
                     "partite": 4,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 88,
-            "name": "xantcha, sleeper agent",
-            "mana_cost": "{1}{B}{R}",
-            "cmc": 3.0,
-            "color_identity": [
-                "BR"
-            ],
-            "partite": 4,
-            "vittorie": 2,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 2,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 2,
                     "winrate": 0.0
                 }
             ]
