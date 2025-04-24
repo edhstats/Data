@@ -259,6 +259,49 @@
             ]
         },
         {
+            "id": 25,
+            "name": "bello, bard of the brambles",
+            "mana_cost": "{1}{R}{G}",
+            "cmc": 3.0,
+            "color_identity": [
+                "GR"
+            ],
+            "partite": 15,
+            "vittorie": 4,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 2,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 3,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 6,
+                    "winrate": 16.7
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 3,
+                    "winrate": 66.7
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 26,
             "name": "ms. bumbleflower",
             "mana_cost": "{1}{G}{W}{U}",
@@ -372,43 +415,6 @@
                     "mese": "2025-04",
                     "partite": 3,
                     "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 25,
-            "name": "bello, bard of the brambles",
-            "mana_cost": "{1}{R}{G}",
-            "cmc": 3.0,
-            "color_identity": [
-                "GR"
-            ],
-            "partite": 14,
-            "vittorie": 4,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 2,
-                    "winrate": 50.0
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 3,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 6,
-                    "winrate": 16.7
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 3,
-                    "winrate": 66.7
                 }
             ]
         },
@@ -672,6 +678,86 @@
             ]
         },
         {
+            "id": 214,
+            "name": "bonny pall, clearcutter",
+            "mana_cost": "{3}{G}{U}{U}",
+            "cmc": 6.0,
+            "color_identity": [
+                "GU"
+            ],
+            "partite": 11,
+            "vittorie": 8,
+            "storico": [
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 4,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 2,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 4,
+                    "winrate": 100.0
+                }
+            ]
+        },
+        {
+            "id": 164,
+            "name": "caesar, legion's emperor",
+            "mana_cost": "{1}{R}{W}{B}",
+            "cmc": 4.0,
+            "color_identity": [
+                "RWB"
+            ],
+            "partite": 11,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 3,
+                    "winrate": 33.3
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 2,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 2,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 3,
+                    "winrate": 33.3
+                }
+            ]
+        },
+        {
             "id": 5,
             "name": "jetmir, nexus of revels",
             "mana_cost": "{1}{R}{G}{W}",
@@ -740,6 +826,43 @@
             ]
         },
         {
+            "id": 28,
+            "name": "toski, bearer of secrets",
+            "mana_cost": "{3}{G}",
+            "cmc": 4.0,
+            "color_identity": [
+                "G"
+            ],
+            "partite": 11,
+            "vittorie": 2,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 2,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 4,
+                    "winrate": 25.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 4,
+                    "winrate": 25.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 37,
             "name": "valgavoth, harrower of souls",
             "mana_cost": "{2}{B}{R}",
@@ -771,49 +894,6 @@
                 {
                     "periodo": "Mar 2025",
                     "mese": "2025-03",
-                    "partite": 2,
-                    "winrate": 50.0
-                }
-            ]
-        },
-        {
-            "id": 164,
-            "name": "caesar, legion's emperor",
-            "mana_cost": "{1}{R}{W}{B}",
-            "cmc": 4.0,
-            "color_identity": [
-                "RWB"
-            ],
-            "partite": 10,
-            "vittorie": 3,
-            "storico": [
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 3,
-                    "winrate": 33.3
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 2,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 2,
-                    "winrate": 50.0
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
                     "partite": 2,
                     "winrate": 50.0
                 }
@@ -900,6 +980,104 @@
             ]
         },
         {
+            "id": 72,
+            "name": "nahiri, forged in fury",
+            "mana_cost": "{2}{R}{W}",
+            "cmc": 4.0,
+            "color_identity": [
+                "RW"
+            ],
+            "partite": 10,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 3,
+                    "winrate": 66.7
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 2,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 2,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
+            "id": 83,
+            "name": "pantlaza, sun-favored",
+            "mana_cost": "{2}{R}{G}{W}",
+            "cmc": 5.0,
+            "color_identity": [
+                "RGW"
+            ],
+            "partite": 10,
+            "vittorie": 5,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 4,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 2,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 178,
             "name": "raffine, scheming seer",
             "mana_cost": " {W}{U}{B}",
@@ -974,37 +1152,6 @@
             ]
         },
         {
-            "id": 28,
-            "name": "toski, bearer of secrets",
-            "mana_cost": "{3}{G}",
-            "cmc": 4.0,
-            "color_identity": [
-                "G"
-            ],
-            "partite": 10,
-            "vittorie": 2,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 2,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 4,
-                    "winrate": 25.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 4,
-                    "winrate": 25.0
-                }
-            ]
-        },
-        {
             "id": 232,
             "name": "vraska, the silencer",
             "mana_cost": "{1}{B}{G}",
@@ -1069,43 +1216,6 @@
                     "mese": "2025-03",
                     "partite": 3,
                     "winrate": 66.7
-                }
-            ]
-        },
-        {
-            "id": 214,
-            "name": "bonny pall, clearcutter",
-            "mana_cost": "{3}{G}{U}{U}",
-            "cmc": 6.0,
-            "color_identity": [
-                "GU"
-            ],
-            "partite": 9,
-            "vittorie": 6,
-            "storico": [
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 4,
-                    "winrate": 50.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 2,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
-                    "partite": 2,
-                    "winrate": 100.0
                 }
             ]
         },
@@ -1258,98 +1368,6 @@
             ]
         },
         {
-            "id": 72,
-            "name": "nahiri, forged in fury",
-            "mana_cost": "{2}{R}{W}",
-            "cmc": 4.0,
-            "color_identity": [
-                "RW"
-            ],
-            "partite": 9,
-            "vittorie": 3,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 3,
-                    "winrate": 66.7
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 2,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 2,
-                    "winrate": 50.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 83,
-            "name": "pantlaza, sun-favored",
-            "mana_cost": "{2}{R}{G}{W}",
-            "cmc": 5.0,
-            "color_identity": [
-                "RGW"
-            ],
-            "partite": 9,
-            "vittorie": 5,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 4,
-                    "winrate": 50.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
             "id": 40,
             "name": "alela, artful provocateur",
             "mana_cost": "{1}{W}{U}{B}",
@@ -1381,6 +1399,49 @@
                 {
                     "periodo": "Feb 2025",
                     "mese": "2025-02",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
+            "id": 63,
+            "name": "kasla, the broken halo",
+            "mana_cost": "{3}{U}{R}{W}",
+            "cmc": 6.0,
+            "color_identity": [
+                "URW"
+            ],
+            "partite": 8,
+            "vittorie": 2,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 4,
+                    "winrate": 25.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
                     "partite": 1,
                     "winrate": 0.0
                 }
@@ -1690,43 +1751,6 @@
             ]
         },
         {
-            "id": 63,
-            "name": "kasla, the broken halo",
-            "mana_cost": "{3}{U}{R}{W}",
-            "cmc": 6.0,
-            "color_identity": [
-                "URW"
-            ],
-            "partite": 7,
-            "vittorie": 2,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 4,
-                    "winrate": 25.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
             "id": 80,
             "name": "marchesa, dealer of death",
             "mana_cost": "{U}{B}{R}",
@@ -1950,6 +1974,31 @@
             ]
         },
         {
+            "id": 238,
+            "name": "gisa, the hellraiser",
+            "mana_cost": "{3}{B}{B}",
+            "cmc": 5.0,
+            "color_identity": [
+                "B"
+            ],
+            "partite": 6,
+            "vittorie": 2,
+            "storico": [
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 3,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 3,
+                    "winrate": 66.7
+                }
+            ]
+        },
+        {
             "id": 32,
             "name": "hakbal of the surging soul",
             "mana_cost": "{2}{G}{U}",
@@ -2039,6 +2088,31 @@
                     "mese": "2025-04",
                     "partite": 1,
                     "winrate": 100.0
+                }
+            ]
+        },
+        {
+            "id": 240,
+            "name": "omo, queen of vesuva",
+            "mana_cost": "{2}{G/U}",
+            "cmc": 3.0,
+            "color_identity": [
+                "GU"
+            ],
+            "partite": 6,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 3,
+                    "winrate": 33.3
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 3,
+                    "winrate": 66.7
                 }
             ]
         },
@@ -2304,6 +2378,49 @@
             ]
         },
         {
+            "id": 191,
+            "name": "esika, god of the tree // the prismatic bridge",
+            "mana_cost": "{2}{G}{W}{U}{B}{R}",
+            "cmc": 7.0,
+            "color_identity": [
+                "GWUBR"
+            ],
+            "partite": 5,
+            "vittorie": 1,
+            "storico": [
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Feb 2025",
+                    "mese": "2025-02",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 141,
             "name": "gandalf of the secret fire",
             "mana_cost": "{1}{U}{R}{W}",
@@ -2337,31 +2454,6 @@
                     "mese": "2025-04",
                     "partite": 1,
                     "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 238,
-            "name": "gisa, the hellraiser",
-            "mana_cost": "{3}{B}{B}",
-            "cmc": 5.0,
-            "color_identity": [
-                "B"
-            ],
-            "partite": 5,
-            "vittorie": 1,
-            "storico": [
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 3,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
-                    "partite": 2,
-                    "winrate": 50.0
                 }
             ]
         },
@@ -2484,31 +2576,6 @@
             ]
         },
         {
-            "id": 240,
-            "name": "omo, queen of vesuva",
-            "mana_cost": "{2}{G/U}",
-            "cmc": 3.0,
-            "color_identity": [
-                "GU"
-            ],
-            "partite": 5,
-            "vittorie": 2,
-            "storico": [
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 3,
-                    "winrate": 33.3
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
-                    "partite": 2,
-                    "winrate": 50.0
-                }
-            ]
-        },
-        {
             "id": 136,
             "name": "shirei, shizo's caretaker",
             "mana_cost": " {4}{B}",
@@ -2621,6 +2688,37 @@
                 {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
+            "id": 144,
+            "name": "tergrid, god of fright // tergrid's lantern",
+            "mana_cost": " {3}{B}{B}",
+            "cmc": 5.0,
+            "color_identity": [
+                "B"
+            ],
+            "partite": 5,
+            "vittorie": 2,
+            "storico": [
+                {
+                    "periodo": "Dec 2024",
+                    "mese": "2024-12",
+                    "partite": 2,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 2,
+                    "winrate": 50.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
                     "partite": 1,
                     "winrate": 0.0
                 }
@@ -2859,43 +2957,6 @@
                     "periodo": "Mar 2025",
                     "mese": "2025-03",
                     "partite": 2,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 191,
-            "name": "esika, god of the tree // the prismatic bridge",
-            "mana_cost": "{2}{G}{W}{U}{B}{R}",
-            "cmc": 7.0,
-            "color_identity": [
-                "GWUBR"
-            ],
-            "partite": 4,
-            "vittorie": 1,
-            "storico": [
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Feb 2025",
-                    "mese": "2025-02",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 1,
                     "winrate": 0.0
                 }
             ]
@@ -3231,31 +3292,6 @@
             ]
         },
         {
-            "id": 144,
-            "name": "tergrid, god of fright // tergrid's lantern",
-            "mana_cost": " {3}{B}{B}",
-            "cmc": 5.0,
-            "color_identity": [
-                "B"
-            ],
-            "partite": 4,
-            "vittorie": 2,
-            "storico": [
-                {
-                    "periodo": "Dec 2024",
-                    "mese": "2024-12",
-                    "partite": 2,
-                    "winrate": 50.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 2,
-                    "winrate": 50.0
-                }
-            ]
-        },
-        {
             "id": 223,
             "name": "ulalek, fused atrocity",
             "mana_cost": "{C/W}{C/U}{C/B}{C/R}{C/G}",
@@ -3450,6 +3486,37 @@
                 {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
+                    "partite": 1,
+                    "winrate": 100.0
+                }
+            ]
+        },
+        {
+            "id": 56,
+            "name": "dragonhawk, fate's tempest",
+            "mana_cost": "{3}{R}{R}",
+            "cmc": 5.0,
+            "color_identity": [
+                "R"
+            ],
+            "partite": 3,
+            "vittorie": 2,
+            "storico": [
+                {
+                    "periodo": "Nov 2024",
+                    "mese": "2024-11",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
                     "partite": 1,
                     "winrate": 100.0
                 }
@@ -3899,6 +3966,25 @@
             ]
         },
         {
+            "id": 254,
+            "name": "breena, the demagogue",
+            "mana_cost": "{1}{W}{B}",
+            "cmc": 3.0,
+            "color_identity": [
+                "BW"
+            ],
+            "partite": 2,
+            "vittorie": 0,
+            "storico": [
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 2,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 77,
             "name": "captain n'ghathrod",
             "mana_cost": "{3}{U}{B}",
@@ -3987,31 +4073,6 @@
                 {
                     "periodo": "Nov 2024",
                     "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 56,
-            "name": "dragonhawk, fate's tempest",
-            "mana_cost": "{3}{R}{R}",
-            "cmc": 5.0,
-            "color_identity": [
-                "R"
-            ],
-            "partite": 2,
-            "vittorie": 1,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
                     "partite": 1,
                     "winrate": 0.0
                 }
