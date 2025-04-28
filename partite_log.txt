@@ -1,32 +1,48 @@
-21.04.25 
-Don: Breena, the Demagogue
-Emi: Pantlaza, Sun-Favored
-Ru: Omo, Queen of Vesuva
-W: Omo, Queen of Vesuva
+26.04.25 
+Don: Edgar Markov
+Luca Proie: Ulalek, Fused Atrocity
+Claudio: Archangel Avacyn // Avacyn, the Purifier
+W: Edgar Markov
 
-21.04.25 
-Emi: Dragonhawk, Fate's Tempest
-ru: Kasla, the Broken Halo
-Don: Nahiri, Forged in Fury
-W: Dragonhawk, Fate's Tempest
+26.04.25 
+Luca: Eriette of the Charmed Apple
+Sisco: Sythis, Harvest's Hand
+Ettore: Shalai and Hallar
+W: Eriette of the Charmed Apple
 
-21.04.25 
+26.04.25 
+Claudio: Archangel Avacyn // Avacyn, the Purifier
+Don: Edgar Markov
+Luca: Ulalek, Fused Atrocity
+W: Ulalek, Fused Atrocity
+
+26.04.25 
+Ettore: Arna Kennerüd, Skycaptain
+Sisco: Ghyrson Starn, Kelermorph
+Luca: Alela, Artful Provocateur
+W: Alela, Artful Provocateur
+
+26.04.25 
+Phyga: Baru, Wurmspeaker
 Ru: Esika, God of the Tree // The Prismatic Bridge
-Emi: Bonny Pall, Clearcutter
+Luca Proie: Ulalek, Fused Atrocity
+W: Esika, God of the Tree // The Prismatic Bridge
+
+26.04.25 
+Don: Hakbal of the Surging Soul
+Matte: Rograkh, Son of Rohgahh
+Claudio: Astarion, the Decadent
+W: Hakbal of the Surging Soul
+
+26.04.25 
+Matte: Dihada, Binder of Wills
+Phyga: Baru, Wurmspeaker
+Ru: Storm, Force of Nature
+W: Dihada, Binder of Wills
+
+26.04.25 
+Matte: Jetmir, Nexus of Revels
+Ru: Omo, Queen of Vesuva
 Don: Breena, the Demagogue
-W: Bonny Pall, Clearcutter
-
-21.04.25 
-Don: Toski, Bearer of Secrets
-Emi: Bonny Pall, Clearcutter
-Ru: Bello, Bard of the Brambles
-W: Bonny Pall, Clearcutter
-
-21.04.25 
-Ru: Tergrid, God of Fright // Tergrid's Lantern
-Don: Caesar, Legion's Emperor
-Emi: Gisa, the Hellraiser
-W: Gisa, the Hellraiser
-
-CommanderGameLog.txt
-Visualizzazione di CommanderGameLog.txt.
+Luca Proie: Disa the Restless
+W: Disa the Restless
