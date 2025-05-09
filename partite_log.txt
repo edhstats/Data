@@ -1,93 +1,35 @@
-30.04.25 
-Ru: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-Matte: Yidris, Maelstrom Wielder
-Gymbro: Riku of Two Reflections
-Don: Prosper, Tome-Bound
-W: Prosper, Tome-Bound
-
-30.04.25 
-Matte: Zacama, Primal Calamity
-Don: Karametra, God of Harvests
-Gymbro: Rocco, Cabaretti Caterer
-Ru: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-W: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-
-03.05.25 
-Luca: Captain Howler, Sea Scourge
-Sisco: Sythis, Harvest's Hand
-Ru: Averna, the Chaos Bloom
-W: Averna, the Chaos Bloom
-
-03.05.25 
-Luca: Hamza, Guardian of Arashin
-Ru: Morska, Undersea Sleuth
-Sisco: Imodane, the Pyrohammer
-W: Morska, Undersea Sleuth
-
-03.05.25 
-Ettore: Ziatora, the Incinerator
-Don: Karametra, God of Harvests
-Matte: Jetmir, Nexus of Revels
-W: Jetmir, Nexus of Revels
-
-05.05.25 
-Matte: Anzrag, the Quake-Mole
-Emi: Gisa, the Hellraiser
-W: Anzrag, the Quake-Mole
-
-03.05.25 
-Don: Karametra, God of Harvests
-Matte: Sidar Jabari of Zhalfir
-Ettore: Zurgo Stormrender
-W: Sidar Jabari of Zhalfir
-
-03.05.25 
-Ru: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-Sisco: Sliver Hivelord
-Luca: Eriette of the Charmed Apple
-W: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-
-03.05.25 
-Don: Eluge, the Shoreless Sea
-Ettore: Marchesa, Dealer of Death
-Matte: Magda, Brazen Outlaw
-W: Eluge, the Shoreless Sea
-
-03.05.25 
-Jappy: Doran, the Siege Tower
-Don: Karametra, God of Harvests
-Emi: Pippin, Warden of Isengard
-W: Karametra, God of Harvests
-
-05.05.25 
-Emi: Pippin, Warden of Isengard
-Jappy: Doran, the Siege Tower
-Don: Karametra, God of Harvests
-W: Doran, the Siege Tower
-
-05.05.25 
-Matte: Omnath, Locus of Creation
+07.05.25 
+Claudio: Archangel Avacyn // Avacyn, the Purifier
+Matte: Dihada, Binder of Wills
 Sisco: Eshki, Temur's Roar
-Ettore: Yarok, the Desecrated
-W: Yarok, the Desecrated
+W: Archangel Avacyn // Avacyn, the Purifier
 
-05.05.25 
-Sisco: Sliver Hivelord
-Ettore: King Macar, the Gold-Cursed
+07.05.25 
+Claudio: Satya, Aetherflux Genius
+Matte: Magda, Brazen Outlaw
+Sisco: Sythis, Harvest's Hand
+W: Satya, Aetherflux Genius
+
+07.05.25 
+Claudio: Krenko, Mob Boss
+Emi: Bonny Pall, Clearcutter
 Don: The Scarab God
 W: The Scarab God
 
-05.05.25 
+07.05.25 
+Ettore: Zur, Eternal Schemer
+Sisco: Imodane, the Pyrohammer
+Matte: Omnath, Locus of Creation
+W: Omnath, Locus of Creation
+
+07.05.25 
+Don: Hakbal of the Surging Soul
 Emi: Tegwyll, Duke of Splendor
-Jappy: Roxanne, Starfall Savant
-Matte: Sidar Jabari of Zhalfir
-W: Roxanne, Starfall Savant
+Ettore: Zurgo Stormrender
+W: Tegwyll, Duke of Splendor
 
-05.05.25 
-Emi: Rakdos, the Muscle
-Jappy: Roxanne, Starfall Savant
-Matte: Magda, Brazen Outlaw
-W: Roxanne, Starfall Savant
-
-CommanderGameLog.txt
-Visualizzazione di CommanderGameLog.txt.
+07.05.25 
+Don: The Scarab God
+Emi: Tegwyll, Duke of Splendor
+Ettore: Arna Kennerüd, Skycaptain
+W: The Scarab God
