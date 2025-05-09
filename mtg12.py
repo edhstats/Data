@@ -586,7 +586,7 @@ def generate_report():
     GROUP BY c.name
     HAVING COUNT(m.id) >= 5  -- evita outlier con 1-2 partite
     ORDER BY "Winrate (%)" DESC
-    LIMIT 5
+    LIMIT 10
 """, conn)
 
 
