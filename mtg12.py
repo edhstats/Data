@@ -512,14 +512,16 @@ def generate_report():
         player_commander_stats[player] = df
 
     player_stats = pd.read_sql_query("""
-        SELECT p.name AS Giocatore,
-               COUNT(m.id) AS Partite,
-               SUM(m.win) AS Vittorie,
-               ROUND(SUM(m.win) * 100.0 / COUNT(m.id), 2) AS "Winrate (%)"
-        FROM players p
-        LEFT JOIN matches m ON m.player_id = p.id
-        GROUP BY p.name
-    """, conn)
+            SELECT p.name AS Giocatore,
+                   COUNT(m.id) AS Partite,
+                   SUM(m.win) AS Vittorie,
+                   ROUND(SUM(m.win) * 100.0 / COUNT(m.id), 2) AS "Winrate (%)"
+            FROM players p
+            LEFT JOIN matches m ON m.player_id = p.id
+            GROUP BY p.name
+            HAVING COUNT(m.id) >= 20
+            ORDER BY "Winrate (%)" DESC, Vittorie DESC
+        """, conn)
 
     color_stats = pd.read_sql_query("""
         SELECT c.color_identity AS Colore, COUNT(*) AS Utilizzi
