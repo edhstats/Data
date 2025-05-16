@@ -1,66 +1,32 @@
-12.05.25 
+14.05.25 
+Matte: Mendicant Core, Guidelight
+Don: Edgar Markov
+Ettore: Ghave, Guru of Spores
+W: Ghave, Guru of Spores
+
+14.05.25 
+Claudio: Satya, Aetherflux Genius
+Ru: Averna, the Chaos Bloom
+Emi: Gisa, the Hellraiser
+W: Gisa, the Hellraiser
+
+14.05.25 
+Don: Eluge, the Shoreless Sea
 Matte: Dihada, Binder of Wills
-Emi: Tegwyll, Duke of Splendor
-Gymbro: Kotis, the Fangkeeper
-Don: Breena, the Demagogue
-W: Breena, the Demagogue
+Ettore: Ureni of the Unwritten
+W: Ureni of the Unwritten
 
-12.05.25 
-Luca Proie: Eshki Dragonclaw
-Ru: Pantlaza, Sun-Favored
-Ska: Chatterfang, Squirrel General
-Ettore: Brudiclad, Telchor Engineer
-W: Chatterfang, Squirrel General
-
-12.05.25 
-Sisco: Eshki, Temur's Roar
-Luca: Helga, Skittish Seer
-Jappy: Captain N'ghathrod
+14.05.25 
 Claudio: Braids, Arisen Nightmare
-W: Captain N'ghathrod
-
-12.05.25 
-Luca Proie: Eshki Dragonclaw
-Ska: Chatterfang, Squirrel General
-Ettore: Lae'zel, Vlaakith's Champion
-Ru: Kasla, the Broken Halo
-W: Kasla, the Broken Halo
-
-12.05.25 
+Ru: Averna, the Chaos Bloom
 Emi: Éowyn, Shieldmaiden
-Don: Breena, the Demagogue
-Sisco: Imodane, the Pyrohammer
-Luca: Eriette of the Charmed Apple
-W: Eriette of the Charmed Apple
+W: Éowyn, Shieldmaiden
 
-12.05.25 
-Matte: Anzrag, the Quake-Mole
-Jappy: Sigarda, Host of Herons
-Gymbro: Kotis, the Fangkeeper
+14.05.25 
 Claudio: Archangel Avacyn // Avacyn, the Purifier
-W: Sigarda, Host of Herons
+Ru: Rona, Herald of Invasion // Rona, Tolarian Obliterator
+Emi: Rakdos, the Muscle
+W: Rakdos, the Muscle
 
-12.05.25 
-Luca Proie: Eshki Dragonclaw
-Ettore: Shanna, Purifying Blade
-Emi: Bonny Pall, Clearcutter
-W: Bonny Pall, Clearcutter
-
-12.05.25 
-Ru: Abdel Adrian, Gorion's Ward
-Ska: Chatterfang, Squirrel General
-Don: The Scarab God
-W: Chatterfang, Squirrel General
-
-12.05.25 
-Luca Proie: Dragonhawk, Fate's Tempest
-Jappy: Goro-Goro and Satoru
-Ettore: Lae'zel, Vlaakith's Champion
-W: Dragonhawk, Fate's Tempest
-
-12.05.25 
-Claudio: Braids, Arisen Nightmare
-Gymbro: Felothar the Steadfast
-Jappy: Goro-Goro and Satoru
-Matte: Dihada, Binder of Wills
-W: Dihada, Binder of Wills
+CommanderGameLog.txt
+Visualizzazione di CommanderGameLog.txt.
