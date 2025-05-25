@@ -1,26 +1,38 @@
-22.05.25 
-Sisco: Rograkh, Son of Rohgahh
+24.05.25 
+Claudio: Teval, the Balanced Scale
+Ettore: Neriv, Crackling Vanguard
 Gymbro: Kotis, the Fangkeeper
-Ru: Pearl-Ear, Imperial Advisor
-W: Pearl-Ear, Imperial Advisor
+W: Kotis, the Fangkeeper
 
-22.05.25 
-Ru: Pantlaza, Sun-Favored
-Gymbro: Kotis, the Fangkeeper
-Sisco: Cult of Skaro
-Ettore: Eshki, Temur's Roar
-W: Eshki, Temur's Roar
+24.05.25 
+Claudio: Teval, the Balanced Scale
+Gymbro: Felothar the Steadfast
+Ettore: Neriv, Crackling Vanguard
+W: Teval, the Balanced Scale
 
-22.05.25 
-Ru: Muldrotha, the Gravetide
-Gymbro: Zhulodok, Void Gorger
-Ettore: Coram, the Undertaker
+24.05.25 
+Matte: Galadriel, Light of Valinor
 Sisco: Kardur, Doomscourge
-W: Zhulodok, Void Gorger
+Don: Hakbal of the Surging Soul
+W: Galadriel, Light of Valinor
 
-22.05.25 
-Ru: Muldrotha, the Gravetide
-Gymbro: Riku of Two Reflections
-Ettore: Coram, the Undertaker
-Sisco: Riku of Two Reflections
-W: Riku of Two Reflections
+24.05.25 
+Claudio: Teval, the Balanced Scale
+Ettore: Eshki, Temur's Roar
+Gymbro: Felothar, Dawn of the Abzan
+W: Teval, the Balanced Scale
+
+24.05.25 
+Ettore: Lae'zel, Vlaakith's Champion
+Matte: Imoen, Mystic Trickster
+Claudio: Archangel Avacyn // Avacyn, the Purifier
+W: Lae'zel, Vlaakith's Champion
+
+24.05.25 
+Don: The Scarab God
+Gymbro: Mahadi, Emporium Master
+Sisco: Imodane, the Pyrohammer
+W: The Scarab God
+
+CommanderGameLog.txt
+Visualizzazione di CommanderGameLog.txt.
