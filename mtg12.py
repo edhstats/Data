@@ -16,6 +16,8 @@ import urllib.parse
 from datetime import datetime
 
 
+
+
 # Percorso del file database persistente
 DB_PATH = 'edh_stats.db'
 
@@ -524,18 +526,37 @@ def generate_report():
         """, conn)
 
     color_stats = pd.read_sql_query("""
-        SELECT
-          c.color_identity,
-          COUNT(*) AS total_games,
-          SUM(m.win) AS total_wins,
-          ROUND(SUM(m.win) * 1.0 / COUNT(*) * 100, 2) AS win_rate
-        FROM matches m
-        JOIN commanders c ON m.commander_id = c.id
-        GROUP BY c.color_identity
-        ORDER BY win_rate DESC;
+            SELECT
+              c.color_identity,
+              COUNT(*) AS total_games,
+              SUM(m.win) AS total_wins,
+              ROUND(SUM(m.win) * 1.0 / COUNT(*) * 100, 2) AS win_rate
+            FROM matches m
+            JOIN commanders c ON m.commander_id = c.id
+            GROUP BY c.color_identity
+            HAVING COUNT(*) >= 5
+            ORDER BY total_games DESC, win_rate DESC
+            LIMIT 5;
+        """, conn)
+    # Mappa da simboli a emoji (o colori HTML/SVG)
+    mana_symbols = {
+        'W': '⚪️',  # White
+        'U': '🔵',  # Blue
+        'B': '⚫️',  # Black
+        'R': '🔴',  # Red
+        'G': '🟢',  # Green
+    }
 
-    """, conn)
+    def convert_identity_to_icons(identity):
+        if not identity:
+            return ''
+        return ''.join(mana_symbols.get(c, c) for c in sorted(identity))
 
+    # Aggiungi colonna con icone
+    color_stats["color_visual"] = color_stats["color_identity"].apply(convert_identity_to_icons)
+
+    # Mostra tabella con icone e valori
+    print(color_stats[["color_visual", "total_games", "total_wins", "win_rate"]])   
     commander_stats = pd.read_sql_query("""
         SELECT c.name AS Comandante,
                COUNT(m.id) AS Partite,
