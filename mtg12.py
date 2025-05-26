@@ -430,7 +430,74 @@ def linkify_commander_names(df):
 # === HTML Helper ===
 def dataframe_to_table(df, table_id):
     return df.to_html(classes="display", table_id=table_id, index=False, border=0)
+css_style = """
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #212529;
+  }
 
+  h1, h2, h3 {
+    color: #343a40;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+
+  th, td {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    text-align: center;
+  }
+
+  th {
+    background-color: #198754;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f1f3f5;
+  }
+
+  tr:hover {
+    background-color: #e9ecef;
+  }
+
+  .player-section {
+    margin-bottom: 30px;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+
+  .player-section h3 {
+    margin-top: 0;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #0d6efd;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+"""
 # === HTML Report Generator ===
 def generate_html_report(
     player_winrate_over_time,
@@ -462,18 +529,7 @@ def generate_html_report(
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-<style>
-body {{ font-family: Arial, sans-serif; margin: 20px; }}
-h1, h2, h3 {{ color: #444; }}
-table {{ width: 100%; border-collapse: collapse; margin-bottom: 20px; }}
-th, td {{ padding: 12px; border: 1px solid #ddd; text-align: center; }}
-th {{ background-color: #4CAF50; color: white; }}
-tr:nth-child(even) {{ background-color: #f2f2f2; }}
-tr:hover {{ background-color: #ddd; }}
-.player-section {{ margin-bottom: 30px; border: 1px solid #ccc; padding: 15px; border-radius: 8px; }}
-.player-section h3 {{ margin-top: 0; background-color: #eee; padding: 10px; border-radius: 5px; }}
-.hidden {{ display: none; }}
-</style>
+{css_style}
 </head>
 <body>
 <h1>Magic EDH Stats Report</h1>
