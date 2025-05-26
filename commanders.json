@@ -3402,6 +3402,25 @@
             ]
         },
         {
+            "id": 271,
+            "name": "aatchik, emerald radian",
+            "mana_cost": "{3}{B}{B}{G}",
+            "cmc": 6.0,
+            "color_identity": [
+                "BG"
+            ],
+            "partite": 4,
+            "vittorie": 0,
+            "storico": [
+                {
+                    "periodo": "May 2025",
+                    "mese": "2025-05",
+                    "partite": 4,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 74,
             "name": "abdel adrian, gorion's ward",
             "mana_cost": "{4}{W}",
