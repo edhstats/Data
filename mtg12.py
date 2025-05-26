@@ -438,6 +438,7 @@ def generate_html_report(
     color_stats_most_played,
     color_stats_best_winrate,
     player_stats,
+    victory_streak,
     commander_stats,
     player_vs_others,
     player_list,
@@ -527,6 +528,10 @@ tr:hover {{ background-color: #ddd; }}
 {dataframe_to_table(player_stats, "playerStatsTable")}
 <h2>Top 5 Comandanti più Giocati</h2>
 {dataframe_to_table(top_commanders_played, "topCommandersPlayedTable")}
+
+<h2>Victory Streak</h2>
+<p>Serie di vittorie più lunghe</p>
+{dataframe_to_table(victory_streak, "winStreakTable")}
 
 <h2>Top 5 Comandanti con Maggior Winrate (min. 5 partite)</h2>
 {dataframe_to_table(top_commanders_winrate, "topCommandersWinrateTable")}
@@ -695,7 +700,72 @@ def generate_report():
         df["color_name"] = df["color_identity"].apply(convert_identity_to_name)
 
 
+    victory_streak= pd.read_sql_query("""
+            WITH sorted_matches AS (
+      SELECT
+        m.id,
+        m.player_id,
+        m.date,
+        m.commander_id,
+        m.win,
+        ROW_NUMBER() OVER (PARTITION BY m.player_id ORDER BY m.date) AS rn_all,
+        ROW_NUMBER() OVER (PARTITION BY m.player_id, m.win ORDER BY m.date) AS rn_by_win
+      FROM matches m
+    ),
 
+    win_streaks_raw AS (
+      SELECT
+        *,
+        rn_all - rn_by_win AS grp
+      FROM sorted_matches
+      WHERE win = 1
+    ),
+
+    win_streaks_base AS (
+      SELECT
+        player_id,
+        grp,
+        COUNT(*) AS streak_length,
+        MIN(date) AS streak_start,
+        MAX(date) AS streak_end
+      FROM win_streaks_raw
+      GROUP BY player_id, grp
+      HAVING COUNT(*) >= 2
+    ),
+
+    commander_wins_per_streak AS (
+      SELECT
+        w.player_id,
+        w.grp,
+        c.name AS commander_name,
+        COUNT(*) AS wins_with_commander
+      FROM win_streaks_raw w
+      JOIN commanders c ON w.commander_id = c.id
+      GROUP BY w.player_id, w.grp, w.commander_id
+    ),
+
+    commander_summary AS (
+      SELECT
+        player_id,
+        grp,
+        GROUP_CONCAT(commander_name || ' (' || wins_with_commander || ')') AS commanders_used
+      FROM commander_wins_per_streak
+      GROUP BY player_id, grp
+    )
+
+    SELECT
+      p.name AS player,
+      ws.streak_length,
+      ws.streak_start,
+      ws.streak_end,
+      cs.commanders_used
+    FROM win_streaks_base ws
+    JOIN commander_summary cs ON ws.player_id = cs.player_id AND ws.grp = cs.grp
+    JOIN players p ON ws.player_id = p.id
+    ORDER BY streak_length DESC, streak_start ASC
+    LIMIT 5;
+
+    """, conn)
    
     commander_stats = pd.read_sql_query("""
         SELECT c.name AS Comandante,
@@ -765,6 +835,7 @@ def generate_report():
     color_stats_best_winrate,
     player_stats,
     commander_stats,
+    victory_streak,
     player_vs_others,
     player_list,
     cmc_medio_totale,
