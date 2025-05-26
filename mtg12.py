@@ -499,7 +499,7 @@ tr:hover {{ background-color: #ddd; }}
 <p><strong>CMC Medio Totale:</strong> {cmc_medio_totale}</p>
 <p><strong>Numero Totale Giocatori:</strong> {num_players}</p>
 <p><strong>Numero Totale Comandanti Giocati:</strong> {num_commanders}</p>
-<p><strong>Numero Totale Partite Registrate:</strong> {total_games}</p>
+<p><strong>Numero Totale Partite Registrate (dal 31.10.24):</strong> {total_games}</p>
 <h2>Dettaglio Comandanti per Giocatore</h2>
 <label for="commanderPlayerSelect">Seleziona Giocatore:</label>
 <select id="commanderPlayerSelect">
