@@ -16,6 +16,34 @@ import urllib.parse
 from datetime import datetime
 
 
+color_names = {
+    'W': 'White',
+    'U': 'Blue',
+    'B': 'Black',
+    'R': 'Red',
+    'G': 'Green',
+    'WU': 'Azorius',
+    'WB': 'Orzhov',
+    'UB': 'Dimir',
+    'UR': 'Izzet',
+    'BR': 'Rakdos',
+    'BG': 'Golgari',
+    'RG': 'Gruul',
+    'WG': 'Selesnya',
+    'WR': 'Boros',
+    'UG': 'Simic',
+    'WUB': 'Esper',
+    'UBR': 'Grixis',
+    'BRG': 'Jund',
+    'RGW': 'Naya',
+    'GWU': 'Bant',
+    'WUR': 'Jeskai',
+    'URG': 'Temur',
+    'WBG': 'Abzan',
+    'UBG': 'Sultai',
+    'WUBRG': '5-Color',
+    # aggiungi altre se vuoi
+}
 
 
 # Percorso del file database persistente
@@ -334,7 +362,8 @@ def dataframe_to_table(df, table_id):
 def generate_html_report(
     player_winrate_over_time,
     player_commander_stats,
-    color_stats,
+    color_stats_most_played,
+    color_stats_best_winrate,
     player_stats,
     commander_stats,
     player_vs_others,
@@ -410,8 +439,17 @@ tr:hover {{ background-color: #ddd; }}
 </div>
 """)
         report_file.write(f"""
-<h2>Colori Più Utilizzati</h2>
-{dataframe_to_table(color_stats, "colorStatsTable")}
+<div style="display: flex; gap: 2em;">
+  <div style="flex: 1;">
+    <h2>Colori Più Utilizzati</h2>
+    {dataframe_to_table(color_stats_most_played[["color_visual", "color_name", "total_games", "total_wins", "win_rate"]], "colorStatsMostPlayed")}
+  </div>
+  <div style="flex: 1;">
+    <h2>Colori Più Vincenti</h2>
+    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins", "win_rate"]], "colorStatsBestWinrate")}
+  </div>
+</div>
+
 <h2>Statistiche dei Giocatori</h2>
 {dataframe_to_table(player_stats, "playerStatsTable")}
 <h2>Top 5 Comandanti più Giocati</h2>
@@ -525,20 +563,37 @@ def generate_report():
             ORDER BY "Winrate (%)" DESC, Vittorie DESC
         """, conn)
 
-    color_stats = pd.read_sql_query("""
-            SELECT
-              c.color_identity,
-              COUNT(*) AS total_games,
-              SUM(m.win) AS total_wins,
-              ROUND(SUM(m.win) * 1.0 / COUNT(*) * 100, 2) AS win_rate
-            FROM matches m
-            JOIN commanders c ON m.commander_id = c.id
-            GROUP BY c.color_identity
-            HAVING COUNT(*) >= 5
-            ORDER BY total_games DESC, win_rate DESC
-            LIMIT 5;
-        """, conn)
-    # Mappa da simboli a emoji (o colori HTML/SVG)
+        # === Top 5 color identity più giocate ===
+    color_stats_most_played = pd.read_sql_query("""
+        SELECT
+          c.color_identity,
+          COUNT(*) AS total_games,
+          SUM(m.win) AS total_wins,
+          ROUND(SUM(m.win) * 1.0 / COUNT(*) * 100, 2) AS win_rate
+        FROM matches m
+        JOIN commanders c ON m.commander_id = c.id
+        GROUP BY c.color_identity
+        HAVING COUNT(*) >= 5
+        ORDER BY total_games DESC
+        LIMIT 5;
+    """, conn)
+
+    # === Top 5 color identity più vincenti ===
+    color_stats_best_winrate = pd.read_sql_query("""
+        SELECT
+          c.color_identity,
+          COUNT(*) AS total_games,
+          SUM(m.win) AS total_wins,
+          ROUND(SUM(m.win) * 1.0 / COUNT(*) * 100, 2) AS win_rate
+        FROM matches m
+        JOIN commanders c ON m.commander_id = c.id
+        GROUP BY c.color_identity
+        HAVING COUNT(*) >= 5
+        ORDER BY win_rate DESC
+        LIMIT 5;
+    """, conn)
+
+    # === Mappa da simboli a emoji ===
     mana_symbols = {
         'W': '⚪️',  # White
         'U': '🔵',  # Blue
@@ -547,16 +602,28 @@ def generate_report():
         'G': '🟢',  # Green
     }
 
+    mana_order = ['W', 'U', 'B', 'R', 'G']
+
     def convert_identity_to_icons(identity):
         if not identity:
             return ''
-        return ''.join(mana_symbols.get(c, c) for c in sorted(identity))
+        ordered = [c for c in mana_order if c in identity]
+        return ''.join(mana_symbols.get(c, c) for c in ordered)
+    def convert_identity_to_name(identity):
+        if not identity:
+            return 'Colorless'
+        key = ''.join([c for c in mana_order if c in identity])
+        return color_names.get(key, key)
 
-    # Aggiungi colonna con icone
-    color_stats["color_visual"] = color_stats["color_identity"].apply(convert_identity_to_icons)
+    # Aggiungi colonne
+    for df in [color_stats_most_played, color_stats_best_winrate]:
+        df["color_identity"] = df["color_identity"].apply(lambda cid: ''.join([c for c in mana_order if c in cid]))
+        df["color_visual"] = df["color_identity"].apply(convert_identity_to_icons)
+        df["color_name"] = df["color_identity"].apply(convert_identity_to_name)
 
-    # Mostra tabella con icone e valori
-    print(color_stats[["color_visual", "total_games", "total_wins", "win_rate"]])   
+
+
+   
     commander_stats = pd.read_sql_query("""
         SELECT c.name AS Comandante,
                COUNT(m.id) AS Partite,
@@ -621,7 +688,8 @@ def generate_report():
     generate_html_report(
     player_winrate_over_time,
     player_commander_stats,
-    color_stats,
+    color_stats_most_played,
+    color_stats_best_winrate,
     player_stats,
     commander_stats,
     player_vs_others,
