@@ -204,7 +204,7 @@
                 {
                     "periodo": "Nov 2024",
                     "mese": "2024-11",
-                    "partite": 2,
+                    "partite": 1,
                     "winrate": 0.0
                 },
                 {
@@ -253,7 +253,7 @@
                 {
                     "periodo": "Nov 2024",
                     "mese": "2024-11",
-                    "partite": 2,
+                    "partite": 1,
                     "winrate": 0.0
                 },
                 {
@@ -860,12 +860,6 @@
             "vittorie": 5,
             "storico": [
                 {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
                     "partite": 1,
@@ -1155,12 +1149,6 @@
             "vittorie": 2,
             "storico": [
                 {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
                     "partite": 4,
@@ -1254,12 +1242,6 @@
             "vittorie": 3,
             "storico": [
                 {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
                     "partite": 1,
@@ -1303,12 +1285,6 @@
             "vittorie": 3,
             "storico": [
                 {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
                     "partite": 3,
@@ -1339,12 +1315,6 @@
             "partite": 10,
             "vittorie": 3,
             "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
                 {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
@@ -1462,12 +1432,6 @@
             "partite": 10,
             "vittorie": 3,
             "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
                 {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
@@ -2125,12 +2089,6 @@
             "vittorie": 0,
             "storico": [
                 {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
                     "periodo": "Dec 2024",
                     "mese": "2024-12",
                     "partite": 2,
@@ -2713,14 +2671,7 @@
             ],
             "partite": 6,
             "vittorie": 1,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 100.0
-                }
-            ]
+            "storico": []
         },
         {
             "id": 3,
@@ -4192,12 +4143,6 @@
             "vittorie": 1,
             "storico": [
                 {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
                     "partite": 1,
@@ -4335,12 +4280,6 @@
             "partite": 3,
             "vittorie": 0,
             "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
                 {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
@@ -4917,14 +4856,7 @@
             ],
             "partite": 2,
             "vittorie": 0,
-            "storico": [
-                {
-                    "periodo": "Nov 2024",
-                    "mese": "2024-11",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
+            "storico": []
         },
         {
             "id": 249,
