@@ -438,16 +438,18 @@ def generate_html_report(
     color_stats_most_played,
     color_stats_best_winrate,
     player_stats,
-    victory_streak,           
-    commander_stats,          
+    victory_streak,
+    commander_stats,
     player_vs_others,
     player_list,
     cmc_medio_totale,
     num_players,
     num_commanders,
     top_commanders_played,
-    top_commanders_winrate      
+    top_commanders_winrate,
+    total_games         # <-- aggiunto qui
 ):
+
 
     chart_data_js = {player: df.to_dict(orient='records') for player, df in player_winrate_over_time.items()}
     with open("edh_report.html", "w", encoding="utf-8") as report_file:
@@ -497,6 +499,7 @@ tr:hover {{ background-color: #ddd; }}
 <p><strong>CMC Medio Totale:</strong> {cmc_medio_totale}</p>
 <p><strong>Numero Totale Giocatori:</strong> {num_players}</p>
 <p><strong>Numero Totale Comandanti Giocati:</strong> {num_commanders}</p>
+<p><strong>Numero Totale Partite Registrate:</strong> {total_games}</p>
 <h2>Dettaglio Comandanti per Giocatore</h2>
 <label for="commanderPlayerSelect">Seleziona Giocatore:</label>
 <select id="commanderPlayerSelect">
@@ -596,6 +599,8 @@ $(document).ready(function() {{
 def generate_report():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
+
+    total_games = pd.read_sql_query("SELECT COUNT(DISTINCT game_id) AS total FROM matches;", conn).iloc[0]["total"]
 
     player_list = pd.read_sql("SELECT name FROM players ORDER BY name", conn)['name'].tolist()
     player_winrate_over_time = {}
@@ -834,16 +839,18 @@ def generate_report():
     color_stats_most_played,
     color_stats_best_winrate,
     player_stats,
-    victory_streak,           # ✅ corretto qui
-    commander_stats,          # ✅ corretto qui
+    victory_streak,
+    commander_stats,
     player_vs_others,
     player_list,
     cmc_medio_totale,
     num_players,
     num_commanders,
     top_commanders_played,
-    top_commanders_winrate
+    top_commanders_winrate,
+    total_games     
 )
+
 
 
     conn.close()
