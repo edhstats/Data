@@ -834,15 +834,15 @@ def generate_report():
     color_stats_most_played,
     color_stats_best_winrate,
     player_stats,
-    commander_stats,
-    victory_streak,
+    victory_streak,           # ✅ corretto qui
+    commander_stats,          # ✅ corretto qui
     player_vs_others,
     player_list,
     cmc_medio_totale,
     num_players,
     num_commanders,
-    top_commanders_played,       # <--- QUI
-    top_commanders_winrate       # <--- QUI
+    top_commanders_played,
+    top_commanders_winrate
 )
 
 
