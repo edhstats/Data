@@ -438,15 +438,15 @@ def generate_html_report(
     color_stats_most_played,
     color_stats_best_winrate,
     player_stats,
-    victory_streak,
-    commander_stats,
+    victory_streak,           
+    commander_stats,          
     player_vs_others,
     player_list,
     cmc_medio_totale,
     num_players,
     num_commanders,
-    top_commanders_played,       
-    top_commanders_winrate       
+    top_commanders_played,
+    top_commanders_winrate      
 ):
 
     chart_data_js = {player: df.to_dict(orient='records') for player, df in player_winrate_over_time.items()}
