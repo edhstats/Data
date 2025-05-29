@@ -1,8 +1,7 @@
 27.05.25 
 Matte: Vivi Ornitier
 Ru: Abdel Adrian, Gorion's Ward
-Gymbro: Frodo, Adventurous Hobbit // Sam, Loyal Attendant
-Luca Proie: Eshki Dragonclaw
+Gymbro: Frodo, Adventurous Hobbit 
 W: Vivi Ornitier
 
 27.05.25 
@@ -36,5 +35,3 @@ Luca Proie: Eshki Dragonclaw
 Gymbro: Varina, Lich Queen
 W: Tegwyll, Duke of Splendor
 
-CommanderGameLog.txt
-Visualizzazione di CommanderGameLog.txt.
