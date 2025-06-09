@@ -1,37 +1,67 @@
-27.05.25 
-Matte: Vivi Ornitier
-Ru: Abdel Adrian, Gorion's Ward
-Gymbro: Frodo, Adventurous Hobbit 
-W: Vivi Ornitier
-
-27.05.25 
-Don: Prosper, Tome-Bound
-Claudio: Teval, the Balanced Scale
-Emi: Pippin, Warden of Isengard
-W: Prosper, Tome-Bound
-
-27.05.25 
-Claudio: Teval, the Balanced Scale
-Ru: Abdel Adrian, Gorion's Ward
-Don: Eluge, the Shoreless Sea
-W: Abdel Adrian, Gorion's Ward
-
-27.05.25 
-Claudio: Archangel Avacyn // Avacyn, the Purifier
-Don: The Scarab God
-Luca Proie: Disa the Restless
-W: Disa the Restless
-
-27.05.25 
-Emi: Bonny Pall, Clearcutter
-Matte: Dihada, Binder of Wills
-Ru: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-W: Rona, Herald of Invasion // Rona, Tolarian Obliterator
-
-27.05.25 
-Emi: Tegwyll, Duke of Splendor
+01.06.25 
+Gymbro: Kotis, the Fangkeeper
 Matte: Kaima, the Fractured Calm
-Luca Proie: Eshki Dragonclaw
-Gymbro: Varina, Lich Queen
-W: Tegwyll, Duke of Splendor
+Claudio: Teval, the Balanced Scale
+Sisco: Eshki, Temur's Roar
+W: Kotis, the Fangkeeper
 
+01.06.25 
+Gymbro: Riku of Two Reflections
+Claudio: Teval, the Balanced Scale
+Matte: Rograkh, Son of Rohgahh
+Sisco: Eshki, Temur's Roar
+W: Rograkh, Son of Rohgahh
+
+01.06.25 
+Gymbro: Mahadi, Emporium Master
+Claudio: Krenko, Mob Boss
+Sisco: Imodane, the Pyrohammer
+Matte: Galadriel, Light of Valinor
+W: Mahadi, Emporium Master
+
+01.06.25 
+Don: Chiss-Goria, Forge Tyrant
+Emi: Dragonhawk, Fate's Tempest
+Ru: Bello, Bard of the Brambles
+W: Bello, Bard of the Brambles
+
+01.06.25 
+Don: Karametra, God of Harvests
+Emi: Talion, the Kindly Lord
+Ru: Kalamax, the Stormsire
+W: Karametra, God of Harvests
+
+01.06.25 
+Don: Edgar Markov
+Ru: Kalamax, the Stormsire
+Emi: Talion, the Kindly Lord
+W: Talion, the Kindly Lord
+
+07.06.25 
+Luca: Helga, Skittish Seer
+Phyga: Slimefoot, the Stowaway
+Gymbro: Rocco, Cabaretti Caterer
+Jappy: Nine-Fingers Keene
+W: Helga, Skittish Seer
+
+07.06.25 
+Claudio: Satya, Aetherflux Genius
+Ettore: Feather, Radiant Arbiter
+Matte: Anrakyr the Traveller
+W: Satya, Aetherflux Genius
+
+07.06.25 
+Claudio: Krenko, Mob Boss
+Ettore: Eshki, Temur's Roar
+Matte: Mendicant Core, Guidelight
+W: Mendicant Core, Guidelight
+
+07.06.25 
+Jappy: Captain N'ghathrod
+Gymbro: Kotis, the Fangkeeper
+Phyga: Slimefoot, the Stowaway
+Luca: Captain Howler, Sea Scourge
+W: Slimefoot, the Stowaway
+
+CommanderGameLog.txt
+Visualizzazione di CommanderGameLog.txt.
