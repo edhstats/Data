@@ -1,67 +1,116 @@
-01.06.25 
-Gymbro: Kotis, the Fangkeeper
-Matte: Kaima, the Fractured Calm
-Claudio: Teval, the Balanced Scale
-Sisco: Eshki, Temur's Roar
-W: Kotis, the Fangkeeper
-
-01.06.25 
-Gymbro: Riku of Two Reflections
-Claudio: Teval, the Balanced Scale
-Matte: Rograkh, Son of Rohgahh
-Sisco: Eshki, Temur's Roar
-W: Rograkh, Son of Rohgahh
-
-01.06.25 
-Gymbro: Mahadi, Emporium Master
-Claudio: Krenko, Mob Boss
-Sisco: Imodane, the Pyrohammer
-Matte: Galadriel, Light of Valinor
-W: Mahadi, Emporium Master
-
-01.06.25 
-Don: Chiss-Goria, Forge Tyrant
-Emi: Dragonhawk, Fate's Tempest
+19.06.25 
 Ru: Bello, Bard of the Brambles
+Ettore: Arna Kennerüd, Skycaptain
+Phyga: Baru, Wurmspeaker
 W: Bello, Bard of the Brambles
 
-01.06.25 
-Don: Karametra, God of Harvests
-Emi: Talion, the Kindly Lord
-Ru: Kalamax, the Stormsire
-W: Karametra, God of Harvests
-
-01.06.25 
-Don: Edgar Markov
-Ru: Kalamax, the Stormsire
-Emi: Talion, the Kindly Lord
-W: Talion, the Kindly Lord
-
-07.06.25 
-Luca: Helga, Skittish Seer
+19.06.25 
 Phyga: Slimefoot, the Stowaway
-Gymbro: Rocco, Cabaretti Caterer
-Jappy: Nine-Fingers Keene
-W: Helga, Skittish Seer
+Ru: Kasla, the Broken Halo
+Matte: Zacama, Primal Calamity
+W: Kasla, the Broken Halo
 
-07.06.25 
+19.06.25 
+Ettore: Ognis, the Dragon's Lash
+Gymbro: Mahadi, Emporium Master
+Giulia: Davros, Dalek Creator
+W: Mahadi, Emporium Master
+
+19.06.25 
+Ru: Rona, Herald of Invasion // Rona, Tolarian Obliterator
+Gymbro: Valgavoth, Harrower of Souls
+Matte: Anzrag, the Quake-Mole
+Giulia: Davros, Dalek Creator
+W: Valgavoth, Harrower of Souls
+
+16.06.25 
+Sisco: Magus Lucea Kane
+Jappy: Raffine, Scheming Seer
+Emi: Zimone and Dina
+W: Zimone and Dina
+
+16.06.25 
+Matte: Kaima, the Fractured Calm
+Jappy: Doran, the Siege Tower
+Ettore: Brudiclad, Telchor Engineer
+Emi: Zimone and Dina
+W: Zimone and Dina
+
+16.06.25 
 Claudio: Satya, Aetherflux Genius
-Ettore: Feather, Radiant Arbiter
-Matte: Anrakyr the Traveller
+Phyga: Slimefoot, the Stowaway
+Don: Breena, the Demagogue
+Ru: Esika, God of the Tree // The Prismatic Bridge
 W: Satya, Aetherflux Genius
 
-07.06.25 
-Claudio: Krenko, Mob Boss
-Ettore: Eshki, Temur's Roar
-Matte: Mendicant Core, Guidelight
-W: Mendicant Core, Guidelight
+16.06.25 
+Gymbro: Valgavoth, Harrower of Souls
+Matte: Rograkh, Son of Rohgahh
+Ettore: Samut, Vizier of Naktamun
+W: Rograkh, Son of Rohgahh
 
-07.06.25 
+16.06.25 
+Ru: Chatterfang, Squirrel General
 Jappy: Captain N'ghathrod
-Gymbro: Kotis, the Fangkeeper
+Matte: Dihada, Binder of Wills
+Gymbro: Valgavoth, Harrower of Souls
+W: Dihada, Binder of Wills
+
+16.06.25 
+Gymbro: Mahadi, Emporium Master
+Jappy: Raffine, Scheming Seer
+Ru: Queen Marchesa
+Matte: Mendicant Core, Guidelight
+W: Mahadi, Emporium Master
+
+16.06.25 
+Don: Nahiri, Forged in Fury
+Claudio: Braids, Arisen Nightmare
+Emi: Zimone and Dina
+W: Zimone and Dina
+
+16.06.25 
 Phyga: Slimefoot, the Stowaway
-Luca: Captain Howler, Sea Scourge
+Ettore: Ureni of the Unwritten
+Sisco: Thrun, Breaker of Silence
 W: Slimefoot, the Stowaway
+
+16.06.25 
+Phyga: Slimefoot, the Stowaway
+Ettore: Ureni of the Unwritten
+Sisco: Thrun, Breaker of Silence
+W: Thrun, Breaker of Silence
+
+11.06.25 
+Emi: Aminatou, Veil Piercer
+Don: Karametra, God of Harvests
+Claudio: Teval, the Balanced Scale
+Ettore: Raphael, Fiendish Savior
+W: Karametra, God of Harvests
+
+11.06.25 
+Matte: Vivi Ornitier
+Don: Eluge, the Shoreless Sea
+Gymbro: Kotis, the Fangkeeper
+W: Vivi Ornitier
+
+11.06.25 
+Emi: Vraska, the Silencer
+Ettore: Sovereign Okinec Ahau
+Claudio: Satya, Aetherflux Genius
+W: Vraska, the Silencer
+
+11.06.25 
+Gymbro: Mahadi, Emporium Master
+Matte: Vivi Ornitier
+Don: Eluge, the Shoreless Sea
+W: Mahadi, Emporium Master
+
+11.06.25 
+Gymbro: Rocco, Cabaretti Caterer
+Matte: Sidar Jabari of Zhalfir
+Don: Karametra, God of Harvests
+W: Rocco, Cabaretti Caterer
 
 CommanderGameLog.txt
 Visualizzazione di CommanderGameLog.txt.
