@@ -631,7 +631,7 @@ def generate_html_report(
   </div>
   <div style="flex: 1;">
     <h2>Colori Più Vincenti</h2>
-    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins", "win_rate"]], "colorStatsBestWinrate")}
+    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins", ]], "colorStatsBestWinrate")}
   </div>
 </div>
 
@@ -774,13 +774,13 @@ def generate_report():
         SELECT
           c.color_identity,
           COUNT(*) AS total_games,
-          SUM(m.win) AS total_wins,
-          ROUND(SUM(m.win) * 1.0 / COUNT(*) * 100, 2) AS win_rate
+          SUM(m.win) AS total_wins
+          
         FROM matches m
         JOIN commanders c ON m.commander_id = c.id
         GROUP BY c.color_identity
-        HAVING COUNT(*) >= 5
-        ORDER BY win_rate DESC
+        
+        ORDER BY total_wins DESC
         LIMIT 5;
     """, conn)
 
