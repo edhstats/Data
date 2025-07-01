@@ -1,57 +1,30 @@
-21.06.25 
-Matte: Anzrag, the Quake-Mole
-Sisco: Thrun, Breaker of Silence
-Gymbro: Riku of Two Reflections
-W: Anzrag, the Quake-Mole
-
-21.06.25 
-Claudio: Teval, the Balanced Scale
+29.06.25 
+Gymbro: Mahadi, Emporium Master
+Ru: Riku of Many Paths
 Don: Maelstrom Wanderer
-Pain: Mendicant Core, Guidelight
-W: Mendicant Core, Guidelight
+W: Mahadi, Emporium Master
 
-21.06.25 
-Sisco: Kardur, Doomscourge
-Gymbro: Felothar the Steadfast
-Matte: Rograkh, Son of Rohgahh
-W: Felothar the Steadfast
-
-21.06.25 
-Matte: Vivi Ornitier
+29.06.25 
+Don: Maelstrom Wanderer
+Ru: Nekusar, the Mindrazer
 Gymbro: Valgavoth, Harrower of Souls
-Sisco: Magus Lucea Kane
-W: Vivi Ornitier
-
-23.06.25 
-Mone: Zurgo Stormrender
-Don: Maelstrom Wanderer
-Jappy: Captain N'ghathrod
-Simo: Rivaz of the Claw
 W: Maelstrom Wanderer
 
-23.06.25 
-Ru: Tivit, Seller of Secrets
+29.06.25 
+Matte: Dihada, Binder of Wills
+Ettore: Arna Kennerüd, Skycaptain
+Claudio: Teval, the Balanced Scale
+W: Dihada, Binder of Wills
+
+29.06.25 
+Gymbro: Riku of Many Paths
 Don: Maelstrom Wanderer
-Mone: Ishai, Ojutai Dragonspeaker
-W: Tivit, Seller of Secrets
+Gymbro: Mahadi, Emporium Master
+W: Riku of Many Paths
 
-23.06.25 
-Emi: Dragonhawk, Fate's Tempest
-Simo: Helga, Skittish Seer
-Jappy: Baylen, the Haymaker
-W: Baylen, the Haymaker
+29.06.25 
+Claudio: Satya, Aetherflux Genius
+Matte: Gluntch, the Bestower
+Ettore: Codie, Vociferous Codex
+W: Codie, Vociferous Codex
 
-23.06.25 
-Emi: Zimone and Dina
-Ru: Daretti, Scrap Savant
-Matte: Sidar Jabari of Zhalfir
-W: Zimone and Dina
-
-23.06.25 
-Emi: Rakdos, the Muscle
-Jappy: Baylen, the Haymaker
-Simo: Helga, Skittish Seer
-W: Rakdos, the Muscle
-
-CommanderGameLog.txt
-Visualizzazione di CommanderGameLog.txt.
