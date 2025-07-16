@@ -661,7 +661,8 @@ report_file.write(f"""
 {dataframe_to_table(top_commanders_winrate, "topCommandersWinrateTable")}
 
 <h2>Statistiche della Stagione Corrente</h2>
-<p>Periodo: {season_start} → {season_end}</p>
+<p>Periodo: {season_start} -> {season_end}</p>
+
 
 <h3>Giocatori (min. 5 partite)</h3>
 {dataframe_to_table(player_stats_season, "playerStatsSeasonTable")}
