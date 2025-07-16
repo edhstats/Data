@@ -14,7 +14,6 @@ import json
 from collections import defaultdict
 import urllib.parse
 from datetime import datetime
-from datetime import datetime, timedelta
 
 
 color_names = {
@@ -118,16 +117,7 @@ color_names = {
   
 }
 
-def get_current_season(today=None, anchor_date=datetime(2025, 7, 16).date(), season_length_days=90):
-    if today is None:
-        today = datetime.today().date()
 
-    days_since_anchor = (today - anchor_date).days
-    season_number = days_since_anchor // season_length_days
-    season_start = anchor_date + timedelta(days=season_number * season_length_days)
-    season_end = season_start + timedelta(days=season_length_days - 1)
-    
-    return season_start, season_end
 
 # Percorso del file database persistente
 DB_PATH = 'edh_stats.db'
@@ -559,6 +549,7 @@ css_style = """
 </style>
 """
 
+# === HTML Report Generator ===
 def generate_html_report(
     player_winrate_over_time,
     player_commander_stats,
@@ -574,18 +565,15 @@ def generate_html_report(
     num_commanders,
     top_commanders_played,
     top_commanders_winrate,
-    total_games,
-    # Aggiunta:
-    player_stats_season,
-    top_commanders_played_season,
-    top_commanders_winrate_season,
-    season_start,
-    season_end
+    total_games         # <-- aggiunto qui
 ):
+
+
     chart_data_js = {player: df.to_dict(orient='records') for player, df in player_winrate_over_time.items()}
     with open("edh_report.html", "w", encoding="utf-8") as report_file:
-        report_file.write(f"""<!DOCTYPE html>
-<html lang="it">
+        report_file.write(f"""
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Magic EDH Stats Report</title>
@@ -596,7 +584,7 @@ def generate_html_report(
 </head>
 <body>
 <h1>Magic EDH Stats Report</h1>
-
+<!-- Iniettata da Python -->
 <p id="lastUpdated" data-ts="{timestamp}">Ultimo aggiornamento: --</p>
 
 <!-- Includi day.js -->
@@ -604,18 +592,22 @@ def generate_html_report(
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/it.js"></script>
 
 <script>
-  dayjs.locale('it');
-  const ts = document.getElementById("lastUpdated").dataset.ts;
-  const formatted = dayjs(ts).format('D MMMM YYYY [alle] HH:mm');
-  document.getElementById("lastUpdated").textContent = "Ultimo aggiornamento: " + formatted;
-</script>
+  dayjs.locale('it');  // Imposta la lingua italiana
 
+  // Recupera il timestamp iniettato da Python (es. nel data attribute)
+  const ts = document.getElementById("lastUpdated").dataset.ts;
+
+  // Formattalo con day.js (solo al primo caricamento)
+  const formatted = dayjs(ts).format('D MMMM YYYY [alle] HH:mm');
+
+  document.getElementById("lastUpdated").textContent =
+    "Ultimo aggiornamento: " + formatted;
+</script>
 <p>Dati dal 31.10.2024</p>
 <p><strong>CMC Medio Totale:</strong> {cmc_medio_totale}</p>
 <p><strong>Numero Totale Giocatori:</strong> {num_players}</p>
 <p><strong>Numero Totale Comandanti Giocati:</strong> {num_commanders}</p>
 <p><strong>Numero Totale Partite Registrate:</strong> {total_games}</p>
-
 <h2>Dettaglio Comandanti per Giocatore</h2>
 <label for="commanderPlayerSelect">Seleziona Giocatore:</label>
 <select id="commanderPlayerSelect">
@@ -623,16 +615,14 @@ def generate_html_report(
 {"".join(f'<option value="{p}">{p}</option>' for p in player_list)}
 </select>
 """)
-
         for player, df in player_commander_stats.items():
             pid = player.replace(" ", "-")
             report_file.write(f"""
 <div id="player-{pid}" class="player-section hidden player-commander-section">
-  <h3>Comandanti di {player}</h3>
-  {dataframe_to_table(df, f"commanderStatsTable-{pid}")}
+<h3>Comandanti di {player}</h3>
+{dataframe_to_table(df, f"commanderStatsTable-{pid}")}
 </div>
 """)
-
         report_file.write(f"""
 <div style="display: flex; gap: 2em;">
   <div style="flex: 1;">
@@ -641,13 +631,12 @@ def generate_html_report(
   </div>
   <div style="flex: 1;">
     <h2>Colori Più Vincenti</h2>
-    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins"]], "colorStatsBestWinrate")}
+    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins", ]], "colorStatsBestWinrate")}
   </div>
 </div>
 
 <h2>Statistiche dei Giocatori</h2>
 {dataframe_to_table(player_stats, "playerStatsTable")}
-
 <h2>Top 5 Comandanti più Giocati</h2>
 {dataframe_to_table(top_commanders_played, "topCommandersPlayedTable")}
 
@@ -658,21 +647,8 @@ def generate_html_report(
 <h2>Top 5 Comandanti con Maggior Winrate (min. 5 partite)</h2>
 {dataframe_to_table(top_commanders_winrate, "topCommandersWinrateTable")}
 
-<h2>Statistiche della Stagione Corrente</h2>
-<p>Periodo: {season_start} -> {season_end}</p>
-
-<h3>Giocatori (min. 5 partite)</h3>
-{dataframe_to_table(player_stats_season, "playerStatsSeasonTable")}
-
-<h3>Top 5 Comandanti più Giocati (Stagione)</h3>
-{dataframe_to_table(top_commanders_played_season, "topCommandersPlayedSeasonTable")}
-
-<h3>Top 5 Comandanti con Maggior Winrate (Stagione, min. 5 partite)</h3>
-{dataframe_to_table(top_commanders_winrate_season, "topCommandersWinrateSeasonTable")}
-
 <h2>Statistiche dei Comandanti</h2>
 {dataframe_to_table(commander_stats, "commanderStatsTable")}
-
 <h2>Statistiche Giocatore vs Avversario</h2>
 <label for="playerSelect">Seleziona Giocatore:</label>
 <select id="playerSelect">
@@ -680,7 +656,6 @@ def generate_html_report(
 {"".join(f'<option value="{p}">{p}</option>' for p in player_list)}
 </select>
 {dataframe_to_table(player_vs_others, "playerVsOthersTable")}
-
 <h2>Andamento Win Rate nel Tempo</h2>
 <label for="winratePlayerSelect">Seleziona Giocatore:</label>
 <select id="winratePlayerSelect">
@@ -688,7 +663,6 @@ def generate_html_report(
 {"".join(f'<option value="{p}">{p}</option>' for p in player_list)}
 </select>
 <canvas id="winrateChart" width="800" height="400"></canvas>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 const chartData = {json.dumps(chart_data_js)};
@@ -727,11 +701,12 @@ $(document).ready(function() {{
 </body>
 </html>
 """)
+    print("✅ Report HTML generato con successo: edh_report.html")
 
+# === Statistiche dal DB ===
 def generate_report():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    season_start, season_end = get_current_season()
 
     total_games = pd.read_sql_query("SELECT COUNT(DISTINCT game_id) AS total FROM matches;", conn).iloc[0]["total"]
 
@@ -768,18 +743,18 @@ def generate_report():
         player_commander_stats[player] = df
 
     player_stats = pd.read_sql_query("""
-        SELECT p.name AS Giocatore,
-               COUNT(m.id) AS Partite,
-               SUM(m.win) AS Vittorie,
-               ROUND(SUM(m.win) * 100.0 / COUNT(m.id), 2) AS "Winrate (%)"
-        FROM players p
-        LEFT JOIN matches m ON m.player_id = p.id
-        GROUP BY p.name
-        HAVING COUNT(m.id) >= 20
-        ORDER BY "Winrate (%)" DESC, Vittorie DESC
-    """, conn)
+            SELECT p.name AS Giocatore,
+                   COUNT(m.id) AS Partite,
+                   SUM(m.win) AS Vittorie,
+                   ROUND(SUM(m.win) * 100.0 / COUNT(m.id), 2) AS "Winrate (%)"
+            FROM players p
+            LEFT JOIN matches m ON m.player_id = p.id
+            GROUP BY p.name
+            HAVING COUNT(m.id) >= 20
+            ORDER BY "Winrate (%)" DESC, Vittorie DESC
+        """, conn)
 
-    # === Top 5 color identity più giocate ===
+        # === Top 5 color identity più giocate ===
     color_stats_most_played = pd.read_sql_query("""
         SELECT
           c.color_identity,
@@ -800,20 +775,24 @@ def generate_report():
           c.color_identity,
           COUNT(*) AS total_games,
           SUM(m.win) AS total_wins
+          
         FROM matches m
         JOIN commanders c ON m.commander_id = c.id
         GROUP BY c.color_identity
+        
         ORDER BY total_wins DESC
         LIMIT 5;
     """, conn)
 
+    # === Mappa da simboli a emoji ===
     mana_symbols = {
-        'W': '⚪️',
-        'U': '🔵',
-        'B': '⚫️',
-        'R': '🔴',
-        'G': '🟢',
+        'W': '⚪️',  # White
+        'U': '🔵',  # Blue
+        'B': '⚫️',  # Black
+        'R': '🔴',  # Red
+        'G': '🟢',  # Green
     }
+
     mana_order = ['W', 'U', 'B', 'R', 'G']
 
     def convert_identity_to_icons(identity):
@@ -821,79 +800,86 @@ def generate_report():
             return ''
         ordered = [c for c in mana_order if c in identity]
         return ''.join(mana_symbols.get(c, c) for c in ordered)
-
     def convert_identity_to_name(identity):
         if not identity:
             return 'Colorless'
         key = ''.join([c for c in mana_order if c in identity])
         return color_names.get(key, key)
 
+    # Aggiungi colonne
     for df in [color_stats_most_played, color_stats_best_winrate]:
         df["color_identity"] = df["color_identity"].apply(lambda cid: ''.join([c for c in mana_order if c in cid]))
         df["color_visual"] = df["color_identity"].apply(convert_identity_to_icons)
         df["color_name"] = df["color_identity"].apply(convert_identity_to_name)
 
-    # === Season Data ===
-    player_stats_season = pd.read_sql_query("""
-        SELECT p.name AS Giocatore,
-               COUNT(m.id) AS Partite,
-               SUM(m.win) AS Vittorie,
-               ROUND(SUM(m.win) * 100.0 / COUNT(m.id), 2) AS "Winrate (%)"
-        FROM players p
-        LEFT JOIN matches m ON m.player_id = p.id
-        WHERE date(m.date) BETWEEN ? AND ?
-        GROUP BY p.name
-        HAVING COUNT(m.id) >= 5
-        ORDER BY "Winrate (%)" DESC, Vittorie DESC
-    """, conn, params=(season_start, season_end))
 
-    top_commanders_played_season = pd.read_sql_query("""
-        SELECT c.name AS Comandante,
-               COUNT(m.id) AS Partite
-        FROM commanders c
-        JOIN matches m ON c.id = m.commander_id
-        WHERE date(m.date) BETWEEN ? AND ?
-        GROUP BY c.name
-        ORDER BY Partite DESC
-        LIMIT 5
-    """, conn, params=(season_start, season_end))
+    victory_streak= pd.read_sql_query("""
+            WITH sorted_matches AS (
+      SELECT
+        m.id,
+        m.player_id,
+        m.date,
+        m.commander_id,
+        m.win,
+        ROW_NUMBER() OVER (PARTITION BY m.player_id ORDER BY m.date) AS rn_all,
+        ROW_NUMBER() OVER (PARTITION BY m.player_id, m.win ORDER BY m.date) AS rn_by_win
+      FROM matches m
+    ),
 
-    top_commanders_winrate_season = pd.read_sql_query("""
-        SELECT c.name AS Comandante,
-               COUNT(m.id) AS Partite,
-               SUM(m.win) AS Vittorie,
-               ROUND(SUM(m.win)*100.0 / COUNT(m.id), 2) AS "Winrate (%)"
-        FROM commanders c
-        JOIN matches m ON c.id = m.commander_id
-        WHERE date(m.date) BETWEEN ? AND ?
-        GROUP BY c.name
-        HAVING COUNT(m.id) >= 5
-        ORDER BY "Winrate (%)" DESC
-        LIMIT 5
-    """, conn, params=(season_start, season_end))
+    win_streaks_raw AS (
+      SELECT
+        *,
+        rn_all - rn_by_win AS grp
+      FROM sorted_matches
+      WHERE win = 1
+    ),
 
-    victory_streak = pd.read_sql_query("""
-    WITH streaks AS (
-        SELECT
-            p.name AS player_name,
-            m.date,
-            m.win,
-            ROW_NUMBER() OVER (PARTITION BY p.name ORDER BY m.date) -
-            SUM(m.win) OVER (PARTITION BY p.name ORDER BY m.date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS grp
-        FROM matches m
-        JOIN players p ON p.id = m.player_id
+    win_streaks_base AS (
+      SELECT
+        player_id,
+        grp,
+        COUNT(*) AS streak_length,
+        MIN(date) AS streak_start,
+        MAX(date) AS streak_end
+      FROM win_streaks_raw
+      GROUP BY player_id, grp
+      HAVING COUNT(*) >= 2
+    ),
+
+    commander_wins_per_streak AS (
+      SELECT
+        w.player_id,
+        w.grp,
+        c.name AS commander_name,
+        COUNT(*) AS wins_with_commander
+      FROM win_streaks_raw w
+      JOIN commanders c ON w.commander_id = c.id
+      GROUP BY w.player_id, w.grp, w.commander_id
+    ),
+
+    commander_summary AS (
+      SELECT
+        player_id,
+        grp,
+        GROUP_CONCAT(commander_name || ' (' || wins_with_commander || ')') AS commanders_used
+      FROM commander_wins_per_streak
+      GROUP BY player_id, grp
     )
+
     SELECT
-        player_name,
-        COUNT(*) AS vittorie_consecutive
-    FROM streaks
-    WHERE win = 1
-    GROUP BY player_name, grp
-    ORDER BY vittorie_consecutive DESC
-    LIMIT 5
-""", conn)
+      p.name AS player,
+      ws.streak_length,
+      ws.streak_start,
+      ws.streak_end,
+      cs.commanders_used
+    FROM win_streaks_base ws
+    JOIN commander_summary cs ON ws.player_id = cs.player_id AND ws.grp = cs.grp
+    JOIN players p ON ws.player_id = p.id
+    ORDER BY streak_length DESC, streak_start ASC
+    LIMIT 5;
 
-
+    """, conn)
+   
     commander_stats = pd.read_sql_query("""
         SELECT c.name AS Comandante,
                COUNT(m.id) AS Partite,
@@ -906,55 +892,55 @@ def generate_report():
     """, conn)
 
     player_vs_others = pd.read_sql_query("""
-    WITH match_data AS (
-        SELECT m1.player_id AS player_id,
-               p1.name AS Giocatore,
-               m2.player_id AS opponent_id,
-               p2.name AS Avversario,
-               m1.win AS Vittorie
-        FROM matches m1
-        JOIN matches m2 ON m1.game_id = m2.game_id AND m1.player_id != m2.player_id
-        JOIN players p1 ON m1.player_id = p1.id
-        JOIN players p2 ON m2.player_id = p2.id
-    )
-    SELECT Giocatore,
-           Avversario,
-           COUNT(*) AS Partite,
-           SUM(Vittorie) AS Vittorie,
-           ROUND(SUM(Vittorie)*100.0 / COUNT(*), 2) AS "Winrate (%)"
-    FROM match_data
-    GROUP BY Giocatore, Avversario
-    ORDER BY Giocatore, "Winrate (%)" DESC
-""", conn)
+        WITH match_data AS (
+            SELECT m1.player_id AS player_id,
+                   p1.name AS Giocatore,
+                   m2.player_id AS opponent_id,
+                   p2.name AS Avversario,
+                   m1.win AS Vittorie
+            FROM matches m1
+            JOIN matches m2 ON m1.game_id = m2.game_id AND m1.player_id != m2.player_id
+            JOIN players p1 ON m1.player_id = p1.id
+            JOIN players p2 ON m2.player_id = p2.id
+        )
+        SELECT Giocatore,
+               Avversario,
+               COUNT(*) AS Partite,
+               SUM(Vittorie) AS Vittorie,
+               ROUND(SUM(Vittorie)*100.0 / COUNT(*), 2) AS "Winrate (%)"
+        FROM match_data
+        GROUP BY Giocatore, Avversario
+        ORDER BY Giocatore, "Winrate (%)" DESC
+    """, conn)
 
     cmc_medio_totale = pd.read_sql_query("SELECT ROUND(AVG(cmc), 2) AS cmc_medio FROM commanders", conn).iloc[0]["cmc_medio"]
     num_players = len(player_list)
     num_commanders = pd.read_sql_query("SELECT COUNT(DISTINCT commander_id) AS n FROM matches", conn).iloc[0]["n"]
 
     top_commanders_played = pd.read_sql_query("""
-        SELECT c.name AS Comandante,
-               COUNT(m.id) AS Partite
-        FROM commanders c
-        JOIN matches m ON c.id = m.commander_id
-        GROUP BY c.name
-        ORDER BY Partite DESC
-        LIMIT 5
-    """, conn)
+    SELECT c.name AS Comandante,
+           COUNT(m.id) AS Partite
+    FROM commanders c
+    JOIN matches m ON c.id = m.commander_id
+    GROUP BY c.name
+    ORDER BY Partite DESC
+    LIMIT 5
+""", conn)
 
     top_commanders_winrate = pd.read_sql_query("""
-        SELECT c.name AS Comandante,
-               COUNT(m.id) AS Partite,
-               SUM(m.win) AS Vittorie,
-               ROUND(SUM(m.win)*100.0 / COUNT(m.id), 2) AS "Winrate (%)"
-        FROM commanders c
-        JOIN matches m ON c.id = m.commander_id
-        GROUP BY c.name
-        HAVING COUNT(m.id) >= 5
-        ORDER BY "Winrate (%)" DESC
-        LIMIT 10
-    """, conn)
+    SELECT c.name AS Comandante,
+           COUNT(m.id) AS Partite,
+           SUM(m.win) AS Vittorie,
+           ROUND(SUM(m.win)*100.0 / COUNT(m.id), 2) AS "Winrate (%)"
+    FROM commanders c
+    JOIN matches m ON c.id = m.commander_id
+    GROUP BY c.name
+    HAVING COUNT(m.id) >= 5  -- evita outlier con 1-2 partite
+    ORDER BY "Winrate (%)" DESC
+    LIMIT 10
+""", conn)
 
-    # === Final Report Generation ===
+
     generate_html_report(
     player_winrate_over_time,
     player_commander_stats,
@@ -970,16 +956,13 @@ def generate_report():
     num_commanders,
     top_commanders_played,
     top_commanders_winrate,
-    total_games,
-    player_stats_season,
-    top_commanders_played_season,
-    top_commanders_winrate_season,
-    season_start,  # <--- aggiungi questo
-    season_end     # <--- e questo
+    total_games     
 )
 
 
+
     conn.close()
+
 
 
 def main():
