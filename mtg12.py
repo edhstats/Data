@@ -586,9 +586,8 @@ def generate_html_report(
 
     chart_data_js = {player: df.to_dict(orient='records') for player, df in player_winrate_over_time.items()}
     with open("edh_report.html", "w", encoding="utf-8") as report_file:
-        report_file.write(f"""
-<!DOCTYPE html>
-<html lang="en">
+        report_file.write(f"""<!DOCTYPE html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <title>Magic EDH Stats Report</title>
@@ -599,7 +598,7 @@ def generate_html_report(
 </head>
 <body>
 <h1>Magic EDH Stats Report</h1>
-<!-- Iniettata da Python -->
+
 <p id="lastUpdated" data-ts="{timestamp}">Ultimo aggiornamento: --</p>
 
 <!-- Includi day.js -->
@@ -607,22 +606,18 @@ def generate_html_report(
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/it.js"></script>
 
 <script>
-  dayjs.locale('it');  // Imposta la lingua italiana
-
-  // Recupera il timestamp iniettato da Python (es. nel data attribute)
+  dayjs.locale('it');
   const ts = document.getElementById("lastUpdated").dataset.ts;
-
-  // Formattalo con day.js (solo al primo caricamento)
   const formatted = dayjs(ts).format('D MMMM YYYY [alle] HH:mm');
-
-  document.getElementById("lastUpdated").textContent =
-    "Ultimo aggiornamento: " + formatted;
+  document.getElementById("lastUpdated").textContent = "Ultimo aggiornamento: " + formatted;
 </script>
+
 <p>Dati dal 31.10.2024</p>
 <p><strong>CMC Medio Totale:</strong> {cmc_medio_totale}</p>
 <p><strong>Numero Totale Giocatori:</strong> {num_players}</p>
 <p><strong>Numero Totale Comandanti Giocati:</strong> {num_commanders}</p>
 <p><strong>Numero Totale Partite Registrate:</strong> {total_games}</p>
+
 <h2>Dettaglio Comandanti per Giocatore</h2>
 <label for="commanderPlayerSelect">Seleziona Giocatore:</label>
 <select id="commanderPlayerSelect">
@@ -630,15 +625,17 @@ def generate_html_report(
 {"".join(f'<option value="{p}">{p}</option>' for p in player_list)}
 </select>
 """)
-        for player, df in player_commander_stats.items():
-            pid = player.replace(" ", "-")
-            report_file.write(f"""
+
+for player, df in player_commander_stats.items():
+    pid = player.replace(" ", "-")
+    report_file.write(f"""
 <div id="player-{pid}" class="player-section hidden player-commander-section">
-<h3>Comandanti di {player}</h3>
-{dataframe_to_table(df, f"commanderStatsTable-{pid}")}
+  <h3>Comandanti di {player}</h3>
+  {dataframe_to_table(df, f"commanderStatsTable-{pid}")}
 </div>
 """)
-        report_file.write(f"""
+
+report_file.write(f"""
 <div style="display: flex; gap: 2em;">
   <div style="flex: 1;">
     <h2>Colori Più Utilizzati</h2>
@@ -646,13 +643,13 @@ def generate_html_report(
   </div>
   <div style="flex: 1;">
     <h2>Colori Più Vincenti</h2>
-    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins", ]], "colorStatsBestWinrate")}
+    {dataframe_to_table(color_stats_best_winrate[["color_visual", "color_name", "total_games", "total_wins"]], "colorStatsBestWinrate")}
   </div>
-
-
 </div>
+
 <h2>Statistiche dei Giocatori</h2>
 {dataframe_to_table(player_stats, "playerStatsTable")}
+
 <h2>Top 5 Comandanti più Giocati</h2>
 {dataframe_to_table(top_commanders_played, "topCommandersPlayedTable")}
 
@@ -662,9 +659,9 @@ def generate_html_report(
 
 <h2>Top 5 Comandanti con Maggior Winrate (min. 5 partite)</h2>
 {dataframe_to_table(top_commanders_winrate, "topCommandersWinrateTable")}
-report_file.write(f"""
+
 <h2>Statistiche della Stagione Corrente</h2>
-report_file.write(f"<p>Periodo: {season_start} → {season_end}</p>")
+<p>Periodo: {season_start} → {season_end}</p>
 
 <h3>Giocatori (min. 5 partite)</h3>
 {dataframe_to_table(player_stats_season, "playerStatsSeasonTable")}
@@ -674,10 +671,10 @@ report_file.write(f"<p>Periodo: {season_start} → {season_end}</p>")
 
 <h3>Top 5 Comandanti con Maggior Winrate (Stagione, min. 5 partite)</h3>
 {dataframe_to_table(top_commanders_winrate_season, "topCommandersWinrateSeasonTable")}
-""")
 
 <h2>Statistiche dei Comandanti</h2>
 {dataframe_to_table(commander_stats, "commanderStatsTable")}
+
 <h2>Statistiche Giocatore vs Avversario</h2>
 <label for="playerSelect">Seleziona Giocatore:</label>
 <select id="playerSelect">
@@ -685,6 +682,7 @@ report_file.write(f"<p>Periodo: {season_start} → {season_end}</p>")
 {"".join(f'<option value="{p}">{p}</option>' for p in player_list)}
 </select>
 {dataframe_to_table(player_vs_others, "playerVsOthersTable")}
+
 <h2>Andamento Win Rate nel Tempo</h2>
 <label for="winratePlayerSelect">Seleziona Giocatore:</label>
 <select id="winratePlayerSelect">
@@ -692,6 +690,7 @@ report_file.write(f"<p>Periodo: {season_start} → {season_end}</p>")
 {"".join(f'<option value="{p}">{p}</option>' for p in player_list)}
 </select>
 <canvas id="winrateChart" width="800" height="400"></canvas>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 const chartData = {json.dumps(chart_data_js)};
@@ -730,7 +729,7 @@ $(document).ready(function() {{
 </body>
 </html>
 """)
-    print("✅ Report HTML generato con successo: edh_report.html")
+
 
 # === Statistiche dal DB ===
 def generate_report():
