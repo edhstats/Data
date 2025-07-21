@@ -14,7 +14,7 @@
                 {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
-                    "partite": 2,
+                    "partite": 1,
                     "winrate": 0.0
                 },
                 {
@@ -210,8 +210,8 @@
                 {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
-                    "partite": 2,
-                    "winrate": 50.0
+                    "partite": 1,
+                    "winrate": 0.0
                 },
                 {
                     "periodo": "Feb 2025",
@@ -961,7 +961,7 @@
                 {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
-                    "partite": 2,
+                    "partite": 1,
                     "winrate": 0.0
                 },
                 {
@@ -1206,12 +1206,6 @@
             "vittorie": 3,
             "storico": [
                 {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
                     "periodo": "Feb 2025",
                     "mese": "2025-02",
                     "partite": 1,
@@ -1242,12 +1236,6 @@
             "partite": 12,
             "vittorie": 3,
             "storico": [
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
                 {
                     "periodo": "Apr 2025",
                     "mese": "2025-04",
@@ -1419,6 +1407,49 @@
                     "periodo": "May 2025",
                     "mese": "2025-05",
                     "partite": 2,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "name": "hakbal of the surging soul",
+            "mana_cost": "{2}{G}{U}",
+            "cmc": 4.0,
+            "color_identity": [
+                "GU"
+            ],
+            "partite": 11,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Jan 2025",
+                    "mese": "2025-01",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 1,
+                    "winrate": 0.0
+                },
+                {
+                    "periodo": "Apr 2025",
+                    "mese": "2025-04",
+                    "partite": 1,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "May 2025",
+                    "mese": "2025-05",
+                    "partite": 3,
+                    "winrate": 33.3
+                },
+                {
+                    "periodo": "Jul 2025",
+                    "mese": "2025-07",
+                    "partite": 1,
                     "winrate": 0.0
                 }
             ]
@@ -1655,43 +1686,6 @@
                     "mese": "2025-06",
                     "partite": 1,
                     "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 32,
-            "name": "hakbal of the surging soul",
-            "mana_cost": "{2}{G}{U}",
-            "cmc": 4.0,
-            "color_identity": [
-                "GU"
-            ],
-            "partite": 10,
-            "vittorie": 3,
-            "storico": [
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
-                {
-                    "periodo": "Apr 2025",
-                    "mese": "2025-04",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
-                    "periodo": "May 2025",
-                    "mese": "2025-05",
-                    "partite": 3,
-                    "winrate": 33.3
                 }
             ]
         },
@@ -3516,12 +3510,6 @@
             "vittorie": 3,
             "storico": [
                 {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 100.0
-                },
-                {
                     "periodo": "Mar 2025",
                     "mese": "2025-03",
                     "partite": 1,
@@ -3865,6 +3853,31 @@
             "partite": 4,
             "vittorie": 2,
             "storico": []
+        },
+        {
+            "id": 197,
+            "name": "gavi, nest warden",
+            "mana_cost": "{2}{U}{R}{W}",
+            "cmc": 5.0,
+            "color_identity": [
+                "URW"
+            ],
+            "partite": 4,
+            "vittorie": 3,
+            "storico": [
+                {
+                    "periodo": "Mar 2025",
+                    "mese": "2025-03",
+                    "partite": 2,
+                    "winrate": 100.0
+                },
+                {
+                    "periodo": "Jul 2025",
+                    "mese": "2025-07",
+                    "partite": 1,
+                    "winrate": 0.0
+                }
+            ]
         },
         {
             "id": 140,
@@ -4296,25 +4309,6 @@
             "storico": []
         },
         {
-            "id": 197,
-            "name": "gavi, nest warden",
-            "mana_cost": "{2}{U}{R}{W}",
-            "cmc": 5.0,
-            "color_identity": [
-                "URW"
-            ],
-            "partite": 3,
-            "vittorie": 3,
-            "storico": [
-                {
-                    "periodo": "Mar 2025",
-                    "mese": "2025-03",
-                    "partite": 2,
-                    "winrate": 100.0
-                }
-            ]
-        },
-        {
             "id": 268,
             "name": "kardur, doomscourge",
             "mana_cost": "{2}{B}{R}",
@@ -4428,6 +4422,25 @@
             ]
         },
         {
+            "id": 291,
+            "name": "neyith of the dire hunt",
+            "mana_cost": "{2}{G}{G}",
+            "cmc": 4.0,
+            "color_identity": [
+                "GR"
+            ],
+            "partite": 3,
+            "vittorie": 0,
+            "storico": [
+                {
+                    "periodo": "Jul 2025",
+                    "mese": "2025-07",
+                    "partite": 3,
+                    "winrate": 0.0
+                }
+            ]
+        },
+        {
             "id": 260,
             "name": "pippin, warden of isengard",
             "mana_cost": "{B}{G}",
@@ -4520,12 +4533,6 @@
             "partite": 3,
             "vittorie": 0,
             "storico": [
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                },
                 {
                     "periodo": "Mar 2025",
                     "mese": "2025-03",
@@ -4781,14 +4788,7 @@
             ],
             "partite": 2,
             "vittorie": 0,
-            "storico": [
-                {
-                    "periodo": "Jan 2025",
-                    "mese": "2025-01",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
+            "storico": []
         },
         {
             "id": 14,
@@ -4909,6 +4909,25 @@
             "storico": []
         },
         {
+            "id": 289,
+            "name": "korvold, fae-cursed king",
+            "mana_cost": "{2}{B}{R}{G}",
+            "cmc": 5.0,
+            "color_identity": [
+                "BGR"
+            ],
+            "partite": 2,
+            "vittorie": 1,
+            "storico": [
+                {
+                    "periodo": "Jul 2025",
+                    "mese": "2025-07",
+                    "partite": 2,
+                    "winrate": 50.0
+                }
+            ]
+        },
+        {
             "id": 208,
             "name": "merry, warden of isengard",
             "mana_cost": "{1}{G}{W}",
@@ -4922,25 +4941,6 @@
                 {
                     "periodo": "Jan 2025",
                     "mese": "2025-01",
-                    "partite": 2,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 291,
-            "name": "neyith of the dire hunt",
-            "mana_cost": "{2}{G}{G}",
-            "cmc": 4.0,
-            "color_identity": [
-                "GR"
-            ],
-            "partite": 2,
-            "vittorie": 0,
-            "storico": [
-                {
-                    "periodo": "Jul 2025",
-                    "mese": "2025-07",
                     "partite": 2,
                     "winrate": 0.0
                 }
@@ -5309,25 +5309,6 @@
                 {
                     "periodo": "Jun 2025",
                     "mese": "2025-06",
-                    "partite": 1,
-                    "winrate": 0.0
-                }
-            ]
-        },
-        {
-            "id": 289,
-            "name": "korvold, fae-cursed king",
-            "mana_cost": "{2}{B}{R}{G}",
-            "cmc": 5.0,
-            "color_identity": [
-                "BGR"
-            ],
-            "partite": 1,
-            "vittorie": 0,
-            "storico": [
-                {
-                    "periodo": "Jul 2025",
-                    "mese": "2025-07",
                     "partite": 1,
                     "winrate": 0.0
                 }
