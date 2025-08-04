@@ -1,76 +1,93 @@
-26.07.25 
-Luca Proie: Caesar, Legion's Emperor
-Daniele: Satya, Aetherflux Genius
-Matte: Jetmir, Nexus of Revels
-W: Jetmir, Nexus of Revels
+30.07.25 
+Sisco: Kaalia of the Vast
+Emi: Talion, the Kindly Lord
+Ettore: Feather, Radiant Arbiter
+W: Feather, Radiant Arbiter
 
-26.07.25 
-Matte: Sedris, the Traitor King
-Claudio: Neyith of the Dire Hunt
-Luca Proie: Zurgo Stormrender
-W: Sedris, the Traitor King
-
-26.07.25 
-Matte: Dihada, Binder of Wills
-Daniele: Satya, Aetherflux Genius
-Ettore: Ureni of the Unwritten
-W: Ureni of the Unwritten
-
-26.07.25 
+30.07.25 
+Matte: Morophon, the Boundless
 Gymbro: Riku of Two Reflections
+Enrico: Xenagos, God of Revels
+W: Morophon, the Boundless
+
+30.07.25 
+Luca Proie: Disa the Restless
+Ru: Hearthhull, the Worldseed
+Andrea: Thalia and The Gitrog Monster
+W: Disa the Restless
+
+02.08.25 
+Gymbro: Hope Estheim
+Sisco: The Wise Mothman
+Don: Voja, Jaws of the Conclave
+Emi: Bonny Pall, Clearcutter
+W: The Wise Mothman
+
+02.08.25 
 Claudio: Neyith of the Dire Hunt
-Luca Proie: Caesar, Legion's Emperor
+Giulia: Davros, Dalek Creator
+Ru: Hearthhull, the Worldseed
+Phyga: Slimefoot, the Stowaway
 W: Neyith of the Dire Hunt
 
-26.07.25 
+02.08.25 
+Claudio: Neyith of the Dire Hunt
+Sisco: The Wise Mothman
+Giulia: Davros, Dalek Creator
+W: Davros, Dalek Creator
+
+02.08.25 
+Emi: Zimone and Dina
+Gymbro: Riku of Two Reflections
+Ru: Hearthhull, the Worldseed
+W: Riku of Two Reflections
+
+02.08.25 
+Don: The Scarab God
+Giulia: Davros, Dalek Creator
+Sisco: Imodane, the Pyrohammer
+W: The Scarab God
+
+30.07.25 
+Gymbro: Hope Estheim
+Enrico: Millicent, Restless Revenant
+Matte: Mendicant Core, Guidelight
+W: Mendicant Core, Guidelight
+
+30.07.25 
+Gymbro: Riku of Two Reflections
+Matte: Morophon, the Boundless
+Enrico: Millicent, Restless Revenant
+W: Riku of Two Reflections
+
+30.07.25 
+Giulia: Davros, Dalek Creator
+Don: Prosper, Tome-Bound
+Luca: Obuun, Mul Daya Ancestor
+W: Obuun, Mul Daya Ancestor
+
+30.07.25 
+Andrea: Thalia and The Gitrog Monster
+Ru: Esika, God of the Tree // The Prismatic Bridge
+Luca Proie: Disa the Restless
+W: Esika, God of the Tree // The Prismatic Bridge
+
+30.07.25 
+Don: Kykar, Wind's Fury
+Emi: Éowyn, Shieldmaiden
+Ettore: Lazav, Wearer of Faces
+Matte: Aurelia, the Warleader
+W: Aurelia, the Warleader
+
+30.07.25 
 Gymbro: Urza, Chief Artificer
-Daniele: Satya, Aetherflux Genius
-Ettore: Zurgo Stormrender
+Giulia: Davros, Dalek Creator
+Claudio: Neyith of the Dire Hunt
+Andrea: Thalia and The Gitrog Monster
 W: Urza, Chief Artificer
 
-26.07.25 
-Gymbro: Rocco, Cabaretti Caterer
-Ettore: Marchesa, Dealer of Death
-Daniele: Satya, Aetherflux Genius
-W: Satya, Aetherflux Genius
-
-26.07.25 
-Ettore: Shalai and Hallar
-Daniele: Satya, Aetherflux Genius
-Gymbro: Riku of Two Reflections
-W: Satya, Aetherflux Genius
-
-23.07.25 
-Luca Proie: Disa the Restless
-Sisco: Kaalia of the Vast
+30.07.25 
 Matte: Vazi, Keen Negotiator
-W: Vazi, Keen Negotiator
-
-23.07.25 
-Claudio: Archangel Avacyn // Avacyn, the Purifier
-Ettore: Arna Kennerüd, Skycaptain
-Gymbro: Kotis, the Fangkeeper
-Don: Maelstrom Wanderer
-W: Maelstrom Wanderer
-
-23.07.25 
-Matte: Vazi, Keen Negotiator
-Ettore: Eshki, Temur's Roar
-Claudio: Neyith of the Dire Hunt
-Davide: Disa the Restless
-W: Neyith of the Dire Hunt
-
-23.07.25 
-Don: Maelstrom Wanderer
-Sisco: Thrun, Breaker of Silence
-Gymbro: Urza, Chief Artificer
-Luca Proie: Ulalek, Fused Atrocity
-W: Ulalek, Fused Atrocity
-
-23.07.25 
-Gymbro: Rocco, Cabaretti Caterer
-Don: Maelstrom Wanderer
 Sisco: Kaalia of the Vast
-Luca Proie: Ulalek, Fused Atrocity
-W: Rocco, Cabaretti Caterer
-
+Luca Proie: Eshki Dragonclaw
+W: Kaalia of the Vast
